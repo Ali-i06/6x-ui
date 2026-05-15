@@ -238,7 +238,7 @@ const hasConfig = computed(() => !ObjectUtil.isEmpty(warpConfig.value));
         <a-collapse-panel header="WARP / WARP+ license key">
           <a-form :colon="false" :label-col="{ md: { span: 6 } }" :wrapper-col="{ md: { span: 14 } }">
             <a-form-item label="Key">
-              <a-input v-model:value="warpPlus" placeholder="26-char WARP+ key" @update:value="licenseError = ''" />
+              <x-input v-model:value="warpPlus" placeholder="26-char WARP+ key" @update:value="licenseError = ''" />
               <div class="license-actions mt-8">
                 <a-button type="primary" :disabled="warpPlus.length < 26" :loading="loading"
                   @click="updateLicense">Update</a-button>

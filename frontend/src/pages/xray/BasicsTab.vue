@@ -294,7 +294,7 @@ const localOutboundTestUrl = computed({
         <template #title>{{ t('pages.xray.outboundTestUrl') }}</template>
         <template #description>{{ t('pages.xray.outboundTestUrlDesc') }}</template>
         <template #control>
-          <a-input v-model:value="localOutboundTestUrl" placeholder="https://www.google.com/generate_204" />
+          <x-input v-model:value="localOutboundTestUrl" placeholder="https://www.google.com/generate_204" />
         </template>
       </SettingListItem>
     </a-collapse-panel>

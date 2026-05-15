@@ -96,7 +96,7 @@ const okText = computed(() =>
     :ok-button-props="{ disabled: !isValid }" :mask-closable="false" @ok="onOk" @cancel="close">
     <a-form :colon="false" :label-col="{ md: { span: 8 } }" :wrapper-col="{ md: { span: 14 } }">
       <a-form-item label="Tag" :validate-status="tagValidateStatus" :help="tagHelp" has-feedback>
-        <a-input v-model:value="form.tag" placeholder="unique balancer tag" />
+        <x-input v-model:value="form.tag" placeholder="unique balancer tag" />
       </a-form-item>
 
       <a-form-item label="Strategy">

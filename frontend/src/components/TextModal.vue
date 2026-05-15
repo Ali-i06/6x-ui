@@ -39,7 +39,7 @@ function download(content, name) {
 
 <template>
   <a-modal :open="open" :title="title" :closable="true" @cancel="close">
-    <a-textarea :value="content" readonly :auto-size="{ minRows: 10, maxRows: 20 }" class="text-modal-content" />
+    <x-input type="textarea" :value="content" readonly :auto-size="{ minRows: 10, maxRows: 20 }" class="text-modal-content" />
     <template #footer>
       <a-button v-if="fileName" @click="download(content, fileName)">
         <template #icon>

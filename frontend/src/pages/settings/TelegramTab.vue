@@ -27,7 +27,7 @@ defineProps({
           {{ allSetting.hasTgBotToken ? 'Configured; leave blank to keep current token.' : t('pages.settings.telegramTokenDesc') }}
         </template>
         <template #control>
-          <a-input-password v-model:value="allSetting.tgBotToken"
+          <x-input type="password" v-model:value="allSetting.tgBotToken"
             :placeholder="allSetting.hasTgBotToken ? 'Configured - enter a new token to replace' : ''" />
         </template>
       </SettingListItem>
@@ -36,7 +36,7 @@ defineProps({
         <template #title>{{ t('pages.settings.telegramChatId') }}</template>
         <template #description>{{ t('pages.settings.telegramChatIdDesc') }}</template>
         <template #control>
-          <a-input v-model:value="allSetting.tgBotChatId" type="text" />
+          <x-input v-model:value="allSetting.tgBotChatId" type="text" />
         </template>
       </SettingListItem>
 
@@ -59,7 +59,7 @@ defineProps({
         <template #title>{{ t('pages.settings.telegramNotifyTime') }}</template>
         <template #description>{{ t('pages.settings.telegramNotifyTimeDesc') }}</template>
         <template #control>
-          <a-input v-model:value="allSetting.tgRunTime" type="text" />
+          <x-input v-model:value="allSetting.tgRunTime" type="text" />
         </template>
       </SettingListItem>
 
@@ -83,7 +83,7 @@ defineProps({
         <template #title>{{ t('pages.settings.tgNotifyCpu') }}</template>
         <template #description>{{ t('pages.settings.tgNotifyCpuDesc') }}</template>
         <template #control>
-          <a-input-number v-model:value="allSetting.tgCpu" :min="0" :max="100" :style="{ width: '100%' }" />
+          <x-input type="number" v-model:value="allSetting.tgCpu" :min="0" :max="100" :style="{ width: '100%' }" />
         </template>
       </SettingListItem>
     </a-collapse-panel>
@@ -93,7 +93,7 @@ defineProps({
         <template #title>{{ t('pages.settings.telegramProxy') }}</template>
         <template #description>{{ t('pages.settings.telegramProxyDesc') }}</template>
         <template #control>
-          <a-input v-model:value="allSetting.tgBotProxy" type="text" placeholder="socks5://user:pass@host:port" />
+          <x-input v-model:value="allSetting.tgBotProxy" type="text" placeholder="socks5://user:pass@host:port" />
         </template>
       </SettingListItem>
 
@@ -101,7 +101,7 @@ defineProps({
         <template #title>{{ t('pages.settings.telegramAPIServer') }}</template>
         <template #description>{{ t('pages.settings.telegramAPIServerDesc') }}</template>
         <template #control>
-          <a-input v-model:value="allSetting.tgBotAPIServer" type="text" placeholder="https://api.example.com" />
+          <x-input v-model:value="allSetting.tgBotAPIServer" type="text" placeholder="https://api.example.com" />
         </template>
       </SettingListItem>
     </a-collapse-panel>

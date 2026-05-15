@@ -58,7 +58,7 @@ function normalizeSubPath() {
         <template #title>{{ t('pages.settings.subListen') }}</template>
         <template #description>{{ t('pages.settings.subListenDesc') }}</template>
         <template #control>
-          <a-input v-model:value="allSetting.subListen" type="text" />
+          <x-input v-model:value="allSetting.subListen" type="text" />
         </template>
       </SettingListItem>
 
@@ -66,7 +66,7 @@ function normalizeSubPath() {
         <template #title>{{ t('pages.settings.subDomain') }}</template>
         <template #description>{{ t('pages.settings.subDomainDesc') }}</template>
         <template #control>
-          <a-input v-model:value="allSetting.subDomain" type="text" />
+          <x-input v-model:value="allSetting.subDomain" type="text" />
         </template>
       </SettingListItem>
 
@@ -74,7 +74,7 @@ function normalizeSubPath() {
         <template #title>{{ t('pages.settings.subPort') }}</template>
         <template #description>{{ t('pages.settings.subPortDesc') }}</template>
         <template #control>
-          <a-input-number v-model:value="allSetting.subPort" :min="1" :max="65535" :style="{ width: '100%' }" />
+          <x-input type="number" v-model:value="allSetting.subPort" :min="1" :max="65535" :style="{ width: '100%' }" />
         </template>
       </SettingListItem>
 
@@ -82,7 +82,7 @@ function normalizeSubPath() {
         <template #title>{{ t('pages.settings.subPath') }}</template>
         <template #description>{{ t('pages.settings.subPathDesc') }}</template>
         <template #control>
-          <a-input v-model:value="subPath" type="text" placeholder="/sub/" @blur="normalizeSubPath" />
+          <x-input v-model:value="subPath" type="text" placeholder="/sub/" @blur="normalizeSubPath" />
         </template>
       </SettingListItem>
 
@@ -90,7 +90,7 @@ function normalizeSubPath() {
         <template #title>{{ t('pages.settings.subURI') }}</template>
         <template #description>{{ t('pages.settings.subURIDesc') }}</template>
         <template #control>
-          <a-input v-model:value="allSetting.subURI" type="text" placeholder="(http|https)://domain[:port]/path/" />
+          <x-input v-model:value="allSetting.subURI" type="text" placeholder="(http|https)://domain[:port]/path/" />
         </template>
       </SettingListItem>
     </a-collapse-panel>
@@ -126,7 +126,7 @@ function normalizeSubPath() {
         <template #title>{{ t('pages.settings.subTitle') }}</template>
         <template #description>{{ t('pages.settings.subTitleDesc') }}</template>
         <template #control>
-          <a-input v-model:value="allSetting.subTitle" type="text" />
+          <x-input v-model:value="allSetting.subTitle" type="text" />
         </template>
       </SettingListItem>
 
@@ -134,7 +134,7 @@ function normalizeSubPath() {
         <template #title>{{ t('pages.settings.subSupportUrl') }}</template>
         <template #description>{{ t('pages.settings.subSupportUrlDesc') }}</template>
         <template #control>
-          <a-input v-model:value="allSetting.subSupportUrl" type="text" placeholder="https://example.com" />
+          <x-input v-model:value="allSetting.subSupportUrl" type="text" placeholder="https://example.com" />
         </template>
       </SettingListItem>
 
@@ -142,7 +142,7 @@ function normalizeSubPath() {
         <template #title>{{ t('pages.settings.subProfileUrl') }}</template>
         <template #description>{{ t('pages.settings.subProfileUrlDesc') }}</template>
         <template #control>
-          <a-input v-model:value="allSetting.subProfileUrl" type="text" placeholder="https://example.com" />
+          <x-input v-model:value="allSetting.subProfileUrl" type="text" placeholder="https://example.com" />
         </template>
       </SettingListItem>
 
@@ -150,7 +150,7 @@ function normalizeSubPath() {
         <template #title>{{ t('pages.settings.subAnnounce') }}</template>
         <template #description>{{ t('pages.settings.subAnnounceDesc') }}</template>
         <template #control>
-          <a-textarea v-model:value="allSetting.subAnnounce" />
+          <x-input type="textarea" v-model:value="allSetting.subAnnounce" />
         </template>
       </SettingListItem>
 
@@ -168,7 +168,7 @@ function normalizeSubPath() {
         <template #title>{{ t('pages.settings.subRoutingRules') }}</template>
         <template #description>{{ t('pages.settings.subRoutingRulesDesc') }}</template>
         <template #control>
-          <a-textarea v-model:value="allSetting.subRoutingRules" placeholder="happ://routing/add/..." />
+          <x-input type="textarea" v-model:value="allSetting.subRoutingRules" placeholder="happ://routing/add/..." />
         </template>
       </SettingListItem>
     </a-collapse-panel>
@@ -178,7 +178,7 @@ function normalizeSubPath() {
         <template #title>{{ t('pages.settings.subCertPath') }}</template>
         <template #description>{{ t('pages.settings.subCertPathDesc') }}</template>
         <template #control>
-          <a-input v-model:value="allSetting.subCertFile" type="text" />
+          <x-input v-model:value="allSetting.subCertFile" type="text" />
         </template>
       </SettingListItem>
 
@@ -186,7 +186,7 @@ function normalizeSubPath() {
         <template #title>{{ t('pages.settings.subKeyPath') }}</template>
         <template #description>{{ t('pages.settings.subKeyPathDesc') }}</template>
         <template #control>
-          <a-input v-model:value="allSetting.subKeyFile" type="text" />
+          <x-input v-model:value="allSetting.subKeyFile" type="text" />
         </template>
       </SettingListItem>
     </a-collapse-panel>
@@ -196,7 +196,7 @@ function normalizeSubPath() {
         <template #title>{{ t('pages.settings.subUpdates') }}</template>
         <template #description>{{ t('pages.settings.subUpdatesDesc') }}</template>
         <template #control>
-          <a-input-number v-model:value="allSetting.subUpdates" :min="1" :style="{ width: '100%' }" />
+          <x-input type="number" v-model:value="allSetting.subUpdates" :min="1" :style="{ width: '100%' }" />
         </template>
       </SettingListItem>
     </a-collapse-panel>

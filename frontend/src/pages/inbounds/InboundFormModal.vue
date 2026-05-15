@@ -633,7 +633,7 @@ watch(
             <a-switch v-model:checked="dbForm.enable" />
           </a-form-item>
           <a-form-item :label="t('pages.inbounds.remark')">
-            <a-input v-model:value="dbForm.remark" />
+            <x-input v-model:value="dbForm.remark" />
           </a-form-item>
           <a-form-item v-if="selectableNodes.length > 0" :label="t('pages.inbounds.deployTo')">
             <a-select v-model:value="dbForm.nodeId" :disabled="mode === 'edit'"
@@ -651,16 +651,16 @@ watch(
             </a-select>
           </a-form-item>
           <a-form-item :label="t('pages.inbounds.address')">
-            <a-input v-model:value="inbound.listen" :placeholder="t('pages.inbounds.monitorDesc')" />
+            <x-input v-model:value="inbound.listen" :placeholder="t('pages.inbounds.monitorDesc')" />
           </a-form-item>
           <a-form-item :label="t('pages.inbounds.port')">
-            <a-input-number v-model:value="inbound.port" :min="1" :max="65535" />
+            <x-input type="number" v-model:value="inbound.port" :min="1" :max="65535" />
           </a-form-item>
           <a-form-item>
             <template #label>
               <a-tooltip :title="t('pages.inbounds.meansNoLimit')">{{ t('pages.inbounds.totalFlow') }}</a-tooltip>
             </template>
-            <a-input-number v-model:value="totalGB" :min="0" :step="0.1" />
+            <x-input type="number" v-model:value="totalGB" :min="0" :step="0.1" />
           </a-form-item>
           <a-form-item :label="t('pages.inbounds.periodicTrafficResetTitle')">
             <a-select v-model:value="dbForm.trafficReset">
@@ -697,7 +697,7 @@ watch(
                       <SyncOutlined class="random-icon" @click="randomEmail(firstClient)" />
                     </a-tooltip>
                   </template>
-                  <a-input v-model:value="firstClient.email" />
+                  <x-input v-model:value="firstClient.email" />
                 </a-form-item>
 
                 <a-form-item v-if="protocol === Protocols.VMESS || protocol === Protocols.VLESS">
@@ -707,7 +707,7 @@ watch(
                       <SyncOutlined class="random-icon" @click="randomUuid(firstClient)" />
                     </a-tooltip>
                   </template>
-                  <a-input v-model:value="firstClient.id" />
+                  <x-input v-model:value="firstClient.id" />
                 </a-form-item>
 
                 <a-form-item v-if="protocol === Protocols.VMESS" label="Security">
@@ -725,7 +725,7 @@ watch(
                       <SyncOutlined v-else class="random-icon" @click="randomPasswordSeq(firstClient)" />
                     </a-tooltip>
                   </template>
-                  <a-input v-model:value="firstClient.password" />
+                  <x-input v-model:value="firstClient.password" />
                 </a-form-item>
 
                 <a-form-item v-if="protocol === Protocols.HYSTERIA">
@@ -734,7 +734,7 @@ watch(
                       <SyncOutlined class="random-icon" @click="randomAuth(firstClient)" />
                     </a-tooltip>
                   </template>
-                  <a-input v-model:value="firstClient.auth" />
+                  <x-input v-model:value="firstClient.auth" />
                 </a-form-item>
 
                 <a-form-item v-if="canEnableTlsFlow" label="Flow">
@@ -745,23 +745,23 @@ watch(
                 </a-form-item>
 
                 <a-form-item v-if="protocol === Protocols.VLESS" label="Reverse tag">
-                  <a-input v-model:value="firstClient.reverseTag" placeholder="Optional reverse tag" />
+                  <x-input v-model:value="firstClient.reverseTag" placeholder="Optional reverse tag" />
                 </a-form-item>
 
                 <a-form-item label="Subscription">
-                  <a-input v-model:value="firstClient.subId">
+                  <x-input v-model:value="firstClient.subId">
                     <template #addonAfter>
                       <SyncOutlined class="random-icon" @click="randomSubId(firstClient)" />
                     </template>
-                  </a-input>
+                  </x-input>
                 </a-form-item>
 
                 <a-form-item label="Comment">
-                  <a-input v-model:value="firstClient.comment" />
+                  <x-input v-model:value="firstClient.comment" />
                 </a-form-item>
 
                 <a-form-item label="Total traffic (GB)">
-                  <a-input-number v-model:value="clientTotalGB" :min="0" :step="0.1" />
+                  <x-input type="number" v-model:value="clientTotalGB" :min="0" :step="0.1" />
                 </a-form-item>
 
                 <a-form-item label="Expiry">
@@ -797,10 +797,10 @@ watch(
         <a-form v-if="protocol === Protocols.VLESS" :colon="false" :label-col="{ sm: { span: 8 } }"
           :wrapper-col="{ sm: { span: 14 } }" class="mt-12">
           <a-form-item label="Decryption">
-            <a-input v-model:value="inbound.settings.decryption" />
+            <x-input v-model:value="inbound.settings.decryption" />
           </a-form-item>
           <a-form-item label="Encryption">
-            <a-input v-model:value="inbound.settings.encryption" />
+            <x-input v-model:value="inbound.settings.encryption" />
           </a-form-item>
           <a-form-item label=" ">
             <a-space :size="8" wrap>
@@ -831,7 +831,7 @@ watch(
               Password
               <SyncOutlined class="random-icon" @click="randomSSPassword(inbound.settings)" />
             </template>
-            <a-input v-model:value="inbound.settings.password" />
+            <x-input v-model:value="inbound.settings.password" />
           </a-form-item>
           <a-form-item label="Network">
             <a-select v-model:value="inbound.settings.network" :style="{ width: '120px' }">
@@ -860,10 +860,10 @@ watch(
           </a-form-item>
           <a-form-item :wrapper-col="{ span: 24 }">
             <a-input-group v-for="(account, idx) in inbound.settings.accounts" :key="idx" compact class="mb-8">
-              <a-input :style="{ width: '45%' }" v-model:value="account.user" placeholder="Username">
+              <x-input :style="{ width: '45%' }" v-model:value="account.user" placeholder="Username">
                 <template #addonBefore>{{ idx + 1 }}</template>
-              </a-input>
-              <a-input :style="{ width: '45%' }" v-model:value="account.pass" placeholder="Password" />
+              </x-input>
+              <x-input :style="{ width: '45%' }" v-model:value="account.pass" placeholder="Password" />
               <a-button @click="inbound.settings.delAccount(idx)">
                 <template #icon>
                   <MinusOutlined />
@@ -885,7 +885,7 @@ watch(
               <a-switch v-model:checked="inbound.settings.udp" />
             </a-form-item>
             <a-form-item v-if="inbound.settings.udp" label="UDP IP">
-              <a-input v-model:value="inbound.settings.ip" />
+              <x-input v-model:value="inbound.settings.ip" />
             </a-form-item>
           </template>
         </a-form>
@@ -894,10 +894,10 @@ watch(
         <a-form v-if="protocol === Protocols.TUNNEL" :colon="false" :label-col="{ sm: { span: 8 } }"
           :wrapper-col="{ sm: { span: 14 } }" class="mt-12">
           <a-form-item label="Rewrite address">
-            <a-input v-model:value="inbound.settings.rewriteAddress" />
+            <x-input v-model:value="inbound.settings.rewriteAddress" />
           </a-form-item>
           <a-form-item label="Rewrite port">
-            <a-input-number v-model:value="inbound.settings.rewritePort" :min="0" :max="65535" />
+            <x-input type="number" v-model:value="inbound.settings.rewritePort" :min="0" :max="65535" />
           </a-form-item>
           <a-form-item label="Allowed network">
             <a-select v-model:value="inbound.settings.allowedNetwork">
@@ -915,10 +915,10 @@ watch(
           </a-form-item>
           <a-form-item v-if="inbound.settings.portMap.length > 0" :wrapper-col="{ span: 24 }">
             <a-input-group v-for="(pm, idx) in inbound.settings.portMap" :key="`pm-${idx}`" compact class="mb-8">
-              <a-input :style="{ width: '30%' }" v-model:value="pm.name" placeholder="5555">
+              <x-input :style="{ width: '30%' }" v-model:value="pm.name" placeholder="5555">
                 <template #addonBefore>{{ idx + 1 }}</template>
-              </a-input>
-              <a-input :style="{ width: '60%' }" v-model:value="pm.value" placeholder="1.1.1.1:7777" />
+              </x-input>
+              <x-input :style="{ width: '60%' }" v-model:value="pm.value" placeholder="1.1.1.1:7777" />
               <a-button @click="inbound.settings.removePortMap(idx)">
                 <template #icon>
                   <MinusOutlined />
@@ -935,10 +935,10 @@ watch(
         <a-form v-if="protocol === Protocols.TUN" :colon="false" :label-col="{ sm: { span: 8 } }"
           :wrapper-col="{ sm: { span: 14 } }" class="mt-12">
           <a-form-item label="Interface name">
-            <a-input v-model:value="inbound.settings.name" placeholder="xray0" />
+            <x-input v-model:value="inbound.settings.name" placeholder="xray0" />
           </a-form-item>
           <a-form-item label="MTU">
-            <a-input-number v-model:value="inbound.settings.mtu" :min="0" />
+            <x-input type="number" v-model:value="inbound.settings.mtu" :min="0" />
           </a-form-item>
           <a-form-item label="Gateway">
             <a-button size="small" @click="inbound.settings.gateway.push('')">
@@ -946,7 +946,7 @@ watch(
                 <PlusOutlined />
               </template>
             </a-button>
-            <a-input v-for="(_ip, j) in inbound.settings.gateway" :key="`tun-gw-${j}`"
+            <x-input v-for="(_ip, j) in inbound.settings.gateway" :key="`tun-gw-${j}`"
               v-model:value="inbound.settings.gateway[j]" class="mt-4"
               :placeholder="j === 0 ? '10.0.0.1/16' : 'fc00::1/64'">
               <template #addonAfter>
@@ -956,7 +956,7 @@ watch(
                   </template>
                 </a-button>
               </template>
-            </a-input>
+            </x-input>
           </a-form-item>
           <a-form-item label="DNS">
             <a-button size="small" @click="inbound.settings.dns.push('')">
@@ -964,7 +964,7 @@ watch(
                 <PlusOutlined />
               </template>
             </a-button>
-            <a-input v-for="(_ip, j) in inbound.settings.dns" :key="`tun-dns-${j}`"
+            <x-input v-for="(_ip, j) in inbound.settings.dns" :key="`tun-dns-${j}`"
               v-model:value="inbound.settings.dns[j]" class="mt-4" :placeholder="j === 0 ? '1.1.1.1' : '8.8.8.8'">
               <template #addonAfter>
                 <a-button size="small" @click="inbound.settings.dns.splice(j, 1)">
@@ -973,10 +973,10 @@ watch(
                   </template>
                 </a-button>
               </template>
-            </a-input>
+            </x-input>
           </a-form-item>
           <a-form-item label="User level">
-            <a-input-number v-model:value="inbound.settings.userLevel" :min="0" />
+            <x-input type="number" v-model:value="inbound.settings.userLevel" :min="0" />
           </a-form-item>
           <a-form-item>
             <template #label>
@@ -990,7 +990,7 @@ watch(
                 <PlusOutlined />
               </template>
             </a-button>
-            <a-input v-for="(_ip, j) in inbound.settings.autoSystemRoutingTable" :key="`tun-rt-${j}`"
+            <x-input v-for="(_ip, j) in inbound.settings.autoSystemRoutingTable" :key="`tun-rt-${j}`"
               v-model:value="inbound.settings.autoSystemRoutingTable[j]" class="mt-4"
               :placeholder="j === 0 ? '0.0.0.0/0' : '::/0'">
               <template #addonAfter>
@@ -1000,7 +1000,7 @@ watch(
                   </template>
                 </a-button>
               </template>
-            </a-input>
+            </x-input>
           </a-form-item>
           <a-form-item>
             <template #label>
@@ -1009,7 +1009,7 @@ watch(
                 Auto outbounds interface
               </a-tooltip>
             </template>
-            <a-input v-model:value="inbound.settings.autoOutboundsInterface" placeholder="auto" />
+            <x-input v-model:value="inbound.settings.autoOutboundsInterface" placeholder="auto" />
           </a-form-item>
         </a-form>
 
@@ -1021,13 +1021,13 @@ watch(
               Secret key
               <SyncOutlined class="random-icon" @click="regenInboundWg" />
             </template>
-            <a-input v-model:value="inbound.settings.secretKey" />
+            <x-input v-model:value="inbound.settings.secretKey" />
           </a-form-item>
           <a-form-item label="Public key">
-            <a-input v-model:value="inbound.settings.pubKey" disabled />
+            <x-input v-model:value="inbound.settings.pubKey" disabled />
           </a-form-item>
           <a-form-item label="MTU">
-            <a-input-number v-model:value="inbound.settings.mtu" />
+            <x-input type="number" v-model:value="inbound.settings.mtu" />
           </a-form-item>
           <a-form-item label="No-kernel TUN">
             <a-switch v-model:checked="inbound.settings.noKernelTun" />
@@ -1051,13 +1051,13 @@ watch(
                 Secret key
                 <SyncOutlined class="random-icon" @click="regenWgKeypair(peer)" />
               </template>
-              <a-input v-model:value="peer.privateKey" />
+              <x-input v-model:value="peer.privateKey" />
             </a-form-item>
             <a-form-item label="Public key">
-              <a-input v-model:value="peer.publicKey" />
+              <x-input v-model:value="peer.publicKey" />
             </a-form-item>
             <a-form-item label="PSK">
-              <a-input v-model:value="peer.psk" />
+              <x-input v-model:value="peer.psk" />
             </a-form-item>
             <a-form-item label="Allowed IPs">
               <a-button size="small" @click="peer.allowedIPs.push('')">
@@ -1065,7 +1065,7 @@ watch(
                   <PlusOutlined />
                 </template>
               </a-button>
-              <a-input v-for="(_ip, j) in peer.allowedIPs" :key="j" v-model:value="peer.allowedIPs[j]" class="mt-4">
+              <x-input v-for="(_ip, j) in peer.allowedIPs" :key="j" v-model:value="peer.allowedIPs[j]" class="mt-4">
                 <template #addonAfter>
                   <a-button v-if="peer.allowedIPs.length > 1" size="small" @click="peer.allowedIPs.splice(j, 1)">
                     <template #icon>
@@ -1073,10 +1073,10 @@ watch(
                     </template>
                   </a-button>
                 </template>
-              </a-input>
+              </x-input>
             </a-form-item>
             <a-form-item label="Keep-alive">
-              <a-input-number v-model:value="peer.keepAlive" :min="0" />
+              <x-input type="number" v-model:value="peer.keepAlive" :min="0" />
             </a-form-item>
           </div>
         </a-form>
@@ -1112,7 +1112,7 @@ watch(
                   SNI
                 </a-tooltip>
               </template>
-              <a-input v-model:value.trim="fallback.name" placeholder="any (leave empty)" />
+              <x-input v-model:value.trim="fallback.name" placeholder="any (leave empty)" />
             </a-form-item>
 
             <a-form-item>
@@ -1137,7 +1137,7 @@ watch(
                   Path
                 </a-tooltip>
               </template>
-              <a-input v-model:value.trim="fallback.path" placeholder="any (leave empty) or /ws" />
+              <x-input v-model:value.trim="fallback.path" placeholder="any (leave empty) or /ws" />
             </a-form-item>
 
             <a-form-item :validate-status="!fallback.dest ? 'error' : ''"
@@ -1148,7 +1148,7 @@ watch(
                   Destination
                 </a-tooltip>
               </template>
-              <a-input v-model:value.trim="fallback.dest" placeholder="80 | 127.0.0.1:8080 | /dev/shm/x.sock" />
+              <x-input v-model:value.trim="fallback.dest" placeholder="80 | 127.0.0.1:8080 | /dev/shm/x.sock" />
             </a-form-item>
 
             <a-form-item>
@@ -1197,10 +1197,10 @@ watch(
               <!-- Request -->
               <a-divider :style="{ margin: '0' }">{{ t('pages.inbounds.stream.general.request') }}</a-divider>
               <a-form-item :label="t('pages.inbounds.stream.tcp.version')">
-                <a-input v-model:value="inbound.stream.tcp.request.version" />
+                <x-input v-model:value="inbound.stream.tcp.request.version" />
               </a-form-item>
               <a-form-item :label="t('pages.inbounds.stream.tcp.method')">
-                <a-input v-model:value="inbound.stream.tcp.request.method" />
+                <x-input v-model:value="inbound.stream.tcp.request.method" />
               </a-form-item>
               <a-form-item>
                 <template #label>
@@ -1213,7 +1213,7 @@ watch(
                   </a-button>
                 </template>
                 <template v-for="(_p, idx) in inbound.stream.tcp.request.path" :key="`tcp-path-${idx}`">
-                  <a-input v-model:value="inbound.stream.tcp.request.path[idx]" class="mb-4">
+                  <x-input v-model:value="inbound.stream.tcp.request.path[idx]" class="mb-4">
                     <template #addonAfter>
                       <a-button v-if="inbound.stream.tcp.request.path.length > 1" size="small"
                         @click="inbound.stream.tcp.request.removePath(idx)">
@@ -1222,7 +1222,7 @@ watch(
                         </template>
                       </a-button>
                     </template>
-                  </a-input>
+                  </x-input>
                 </template>
               </a-form-item>
               <a-form-item :label="t('pages.inbounds.stream.tcp.requestHeader')">
@@ -1235,11 +1235,11 @@ watch(
               <a-form-item v-if="inbound.stream.tcp.request.headers.length > 0" :wrapper-col="{ span: 24 }">
                 <a-input-group v-for="(h, idx) in inbound.stream.tcp.request.headers" :key="`tcp-rh-${idx}`" compact
                   class="mb-8">
-                  <a-input :style="{ width: '45%' }" v-model:value="h.name"
+                  <x-input :style="{ width: '45%' }" v-model:value="h.name"
                     :placeholder="t('pages.inbounds.stream.general.name')">
                     <template #addonBefore>{{ idx + 1 }}</template>
-                  </a-input>
-                  <a-input :style="{ width: '45%' }" v-model:value="h.value"
+                  </x-input>
+                  <x-input :style="{ width: '45%' }" v-model:value="h.value"
                     :placeholder="t('pages.inbounds.stream.general.value')" />
                   <a-button @click="inbound.stream.tcp.request.removeHeader(idx)">
                     <template #icon>
@@ -1252,13 +1252,13 @@ watch(
               <!-- Response -->
               <a-divider :style="{ margin: '0' }">{{ t('pages.inbounds.stream.general.response') }}</a-divider>
               <a-form-item :label="t('pages.inbounds.stream.tcp.version')">
-                <a-input v-model:value="inbound.stream.tcp.response.version" />
+                <x-input v-model:value="inbound.stream.tcp.response.version" />
               </a-form-item>
               <a-form-item :label="t('pages.inbounds.stream.tcp.status')">
-                <a-input v-model:value="inbound.stream.tcp.response.status" />
+                <x-input v-model:value="inbound.stream.tcp.response.status" />
               </a-form-item>
               <a-form-item :label="t('pages.inbounds.stream.tcp.statusDescription')">
-                <a-input v-model:value="inbound.stream.tcp.response.reason" />
+                <x-input v-model:value="inbound.stream.tcp.response.reason" />
               </a-form-item>
               <a-form-item :label="t('pages.inbounds.stream.tcp.responseHeader')">
                 <a-button size="small"
@@ -1271,11 +1271,11 @@ watch(
               <a-form-item v-if="inbound.stream.tcp.response.headers.length > 0" :wrapper-col="{ span: 24 }">
                 <a-input-group v-for="(h, idx) in inbound.stream.tcp.response.headers" :key="`tcp-rsh-${idx}`" compact
                   class="mb-8">
-                  <a-input :style="{ width: '45%' }" v-model:value="h.name"
+                  <x-input :style="{ width: '45%' }" v-model:value="h.name"
                     :placeholder="t('pages.inbounds.stream.general.name')">
                     <template #addonBefore>{{ idx + 1 }}</template>
-                  </a-input>
-                  <a-input :style="{ width: '45%' }" v-model:value="h.value"
+                  </x-input>
+                  <x-input :style="{ width: '45%' }" v-model:value="h.value"
                     :placeholder="t('pages.inbounds.stream.general.value')" />
                   <a-button @click="inbound.stream.tcp.response.removeHeader(idx)">
                     <template #icon>
@@ -1290,22 +1290,22 @@ watch(
           <!-- mKCP -->
           <template v-if="network === 'kcp'">
             <a-form-item label="MTU">
-              <a-input-number v-model:value="inbound.stream.kcp.mtu" :min="576" :max="1460" />
+              <x-input type="number" v-model:value="inbound.stream.kcp.mtu" :min="576" :max="1460" />
             </a-form-item>
             <a-form-item label="TTI (ms)">
-              <a-input-number v-model:value="inbound.stream.kcp.tti" :min="10" :max="100" />
+              <x-input type="number" v-model:value="inbound.stream.kcp.tti" :min="10" :max="100" />
             </a-form-item>
             <a-form-item label="Uplink (MB/s)">
-              <a-input-number v-model:value="inbound.stream.kcp.upCap" :min="0" />
+              <x-input type="number" v-model:value="inbound.stream.kcp.upCap" :min="0" />
             </a-form-item>
             <a-form-item label="Downlink (MB/s)">
-              <a-input-number v-model:value="inbound.stream.kcp.downCap" :min="0" />
+              <x-input type="number" v-model:value="inbound.stream.kcp.downCap" :min="0" />
             </a-form-item>
             <a-form-item label="CWND Multiplier">
-              <a-input-number v-model:value="inbound.stream.kcp.cwndMultiplier" :min="1" />
+              <x-input type="number" v-model:value="inbound.stream.kcp.cwndMultiplier" :min="1" />
             </a-form-item>
             <a-form-item label="Max Sending Window">
-              <a-input-number v-model:value="inbound.stream.kcp.maxSendingWindow" :min="0" />
+              <x-input type="number" v-model:value="inbound.stream.kcp.maxSendingWindow" :min="0" />
             </a-form-item>
           </template>
 
@@ -1315,13 +1315,13 @@ watch(
               <a-switch v-model:checked="inbound.stream.ws.acceptProxyProtocol" />
             </a-form-item>
             <a-form-item :label="t('host')">
-              <a-input v-model:value="inbound.stream.ws.host" />
+              <x-input v-model:value="inbound.stream.ws.host" />
             </a-form-item>
             <a-form-item :label="t('path')">
-              <a-input v-model:value="inbound.stream.ws.path" />
+              <x-input v-model:value="inbound.stream.ws.path" />
             </a-form-item>
             <a-form-item label="Heartbeat Period">
-              <a-input-number v-model:value="inbound.stream.ws.heartbeatPeriod" :min="0" />
+              <x-input type="number" v-model:value="inbound.stream.ws.heartbeatPeriod" :min="0" />
             </a-form-item>
             <a-form-item :label="t('pages.inbounds.stream.tcp.requestHeader')">
               <a-button size="small" @click="inbound.stream.ws.addHeader('', '')">
@@ -1332,11 +1332,11 @@ watch(
             </a-form-item>
             <a-form-item v-if="inbound.stream.ws.headers.length > 0" :wrapper-col="{ span: 24 }">
               <a-input-group v-for="(h, idx) in inbound.stream.ws.headers" :key="`ws-h-${idx}`" compact class="mb-8">
-                <a-input :style="{ width: '45%' }" v-model:value="h.name"
+                <x-input :style="{ width: '45%' }" v-model:value="h.name"
                   :placeholder="t('pages.inbounds.stream.general.name')">
                   <template #addonBefore>{{ idx + 1 }}</template>
-                </a-input>
-                <a-input :style="{ width: '45%' }" v-model:value="h.value"
+                </x-input>
+                <x-input :style="{ width: '45%' }" v-model:value="h.value"
                   :placeholder="t('pages.inbounds.stream.general.value')" />
                 <a-button @click="inbound.stream.ws.removeHeader(idx)">
                   <template #icon>
@@ -1350,10 +1350,10 @@ watch(
           <!-- gRPC -->
           <template v-if="network === 'grpc'">
             <a-form-item label="Service Name">
-              <a-input v-model:value="inbound.stream.grpc.serviceName" />
+              <x-input v-model:value="inbound.stream.grpc.serviceName" />
             </a-form-item>
             <a-form-item label="Authority">
-              <a-input v-model:value="inbound.stream.grpc.authority" />
+              <x-input v-model:value="inbound.stream.grpc.authority" />
             </a-form-item>
             <a-form-item label="Multi Mode">
               <a-switch v-model:checked="inbound.stream.grpc.multiMode" />
@@ -1366,10 +1366,10 @@ watch(
               <a-switch v-model:checked="inbound.stream.httpupgrade.acceptProxyProtocol" />
             </a-form-item>
             <a-form-item :label="t('host')">
-              <a-input v-model:value="inbound.stream.httpupgrade.host" />
+              <x-input v-model:value="inbound.stream.httpupgrade.host" />
             </a-form-item>
             <a-form-item :label="t('path')">
-              <a-input v-model:value="inbound.stream.httpupgrade.path" />
+              <x-input v-model:value="inbound.stream.httpupgrade.path" />
             </a-form-item>
             <a-form-item :label="t('pages.inbounds.stream.tcp.requestHeader')">
               <a-button size="small" @click="inbound.stream.httpupgrade.addHeader('', '')">
@@ -1381,11 +1381,11 @@ watch(
             <a-form-item v-if="inbound.stream.httpupgrade.headers.length > 0" :wrapper-col="{ span: 24 }">
               <a-input-group v-for="(h, idx) in inbound.stream.httpupgrade.headers" :key="`hu-h-${idx}`" compact
                 class="mb-8">
-                <a-input :style="{ width: '45%' }" v-model:value="h.name"
+                <x-input :style="{ width: '45%' }" v-model:value="h.name"
                   :placeholder="t('pages.inbounds.stream.general.name')">
                   <template #addonBefore>{{ idx + 1 }}</template>
-                </a-input>
-                <a-input :style="{ width: '45%' }" v-model:value="h.value"
+                </x-input>
+                <x-input :style="{ width: '45%' }" v-model:value="h.value"
                   :placeholder="t('pages.inbounds.stream.general.value')" />
                 <a-button @click="inbound.stream.httpupgrade.removeHeader(idx)">
                   <template #icon>
@@ -1399,10 +1399,10 @@ watch(
           <!-- XHTTP -->
           <template v-if="network === 'xhttp'">
             <a-form-item :label="t('host')">
-              <a-input v-model:value="inbound.stream.xhttp.host" />
+              <x-input v-model:value="inbound.stream.xhttp.host" />
             </a-form-item>
             <a-form-item :label="t('path')">
-              <a-input v-model:value="inbound.stream.xhttp.path" />
+              <x-input v-model:value="inbound.stream.xhttp.path" />
             </a-form-item>
             <a-form-item :label="t('pages.inbounds.stream.tcp.requestHeader')">
               <a-button size="small" @click="inbound.stream.xhttp.addHeader('', '')">
@@ -1413,11 +1413,11 @@ watch(
             </a-form-item>
             <a-form-item v-if="inbound.stream.xhttp.headers.length > 0" :wrapper-col="{ span: 24 }">
               <a-input-group v-for="(h, idx) in inbound.stream.xhttp.headers" :key="`xh-h-${idx}`" compact class="mb-8">
-                <a-input :style="{ width: '45%' }" v-model:value="h.name"
+                <x-input :style="{ width: '45%' }" v-model:value="h.name"
                   :placeholder="t('pages.inbounds.stream.general.name')">
                   <template #addonBefore>{{ idx + 1 }}</template>
-                </a-input>
-                <a-input :style="{ width: '45%' }" v-model:value="h.value"
+                </x-input>
+                <x-input :style="{ width: '45%' }" v-model:value="h.value"
                   :placeholder="t('pages.inbounds.stream.general.value')" />
                 <a-button @click="inbound.stream.xhttp.removeHeader(idx)">
                   <template #icon>
@@ -1432,30 +1432,30 @@ watch(
               </a-select>
             </a-form-item>
             <a-form-item v-if="inbound.stream.xhttp.mode === 'packet-up'" label="Max Buffered Upload">
-              <a-input-number v-model:value="inbound.stream.xhttp.scMaxBufferedPosts" />
+              <x-input type="number" v-model:value="inbound.stream.xhttp.scMaxBufferedPosts" />
             </a-form-item>
             <a-form-item v-if="inbound.stream.xhttp.mode === 'packet-up'" label="Max Upload Size (Byte)">
-              <a-input v-model:value="inbound.stream.xhttp.scMaxEachPostBytes" />
+              <x-input v-model:value="inbound.stream.xhttp.scMaxEachPostBytes" />
             </a-form-item>
             <a-form-item v-if="inbound.stream.xhttp.mode === 'stream-up'" label="Stream-Up Server">
-              <a-input v-model:value="inbound.stream.xhttp.scStreamUpServerSecs" />
+              <x-input v-model:value="inbound.stream.xhttp.scStreamUpServerSecs" />
             </a-form-item>
             <a-form-item label="Server Max Header Bytes">
-              <a-input-number v-model:value="inbound.stream.xhttp.serverMaxHeaderBytes" :min="0"
+              <x-input type="number" v-model:value="inbound.stream.xhttp.serverMaxHeaderBytes" :min="0"
                 placeholder="0 (default)" />
             </a-form-item>
             <a-form-item label="Padding Bytes">
-              <a-input v-model:value="inbound.stream.xhttp.xPaddingBytes" />
+              <x-input v-model:value="inbound.stream.xhttp.xPaddingBytes" />
             </a-form-item>
             <a-form-item label="Padding Obfs Mode">
               <a-switch v-model:checked="inbound.stream.xhttp.xPaddingObfsMode" />
             </a-form-item>
             <template v-if="inbound.stream.xhttp.xPaddingObfsMode">
               <a-form-item label="Padding Key">
-                <a-input v-model:value="inbound.stream.xhttp.xPaddingKey" placeholder="x_padding" />
+                <x-input v-model:value="inbound.stream.xhttp.xPaddingKey" placeholder="x_padding" />
               </a-form-item>
               <a-form-item label="Padding Header">
-                <a-input v-model:value="inbound.stream.xhttp.xPaddingHeader" placeholder="X-Padding" />
+                <x-input v-model:value="inbound.stream.xhttp.xPaddingHeader" placeholder="X-Padding" />
               </a-form-item>
               <a-form-item label="Padding Placement">
                 <a-select v-model:value="inbound.stream.xhttp.xPaddingPlacement">
@@ -1486,7 +1486,7 @@ watch(
             <a-form-item
               v-if="inbound.stream.xhttp.sessionPlacement && inbound.stream.xhttp.sessionPlacement !== 'path'"
               label="Session Key">
-              <a-input v-model:value="inbound.stream.xhttp.sessionKey" placeholder="x_session" />
+              <x-input v-model:value="inbound.stream.xhttp.sessionKey" placeholder="x_session" />
             </a-form-item>
             <a-form-item label="Sequence Placement">
               <a-select v-model:value="inbound.stream.xhttp.seqPlacement">
@@ -1499,7 +1499,7 @@ watch(
             </a-form-item>
             <a-form-item v-if="inbound.stream.xhttp.seqPlacement && inbound.stream.xhttp.seqPlacement !== 'path'"
               label="Sequence Key">
-              <a-input v-model:value="inbound.stream.xhttp.seqKey" placeholder="x_seq" />
+              <x-input v-model:value="inbound.stream.xhttp.seqKey" placeholder="x_seq" />
             </a-form-item>
             <a-form-item v-if="inbound.stream.xhttp.mode === 'packet-up'" label="Uplink Data Placement">
               <a-select v-model:value="inbound.stream.xhttp.uplinkDataPlacement">
@@ -1513,7 +1513,7 @@ watch(
             <a-form-item
               v-if="inbound.stream.xhttp.mode === 'packet-up' && inbound.stream.xhttp.uplinkDataPlacement && inbound.stream.xhttp.uplinkDataPlacement !== 'body'"
               label="Uplink Data Key">
-              <a-input v-model:value="inbound.stream.xhttp.uplinkDataKey" placeholder="x_data" />
+              <x-input v-model:value="inbound.stream.xhttp.uplinkDataKey" placeholder="x_data" />
             </a-form-item>
             <a-form-item label="No SSE Header">
               <a-switch v-model:checked="inbound.stream.xhttp.noSSEHeader" />
@@ -1531,7 +1531,7 @@ watch(
 
           <template v-if="security === 'tls' && inbound.stream.tls">
             <a-form-item label="SNI">
-              <a-input v-model:value="inbound.stream.tls.sni" placeholder="Server Name Indication" />
+              <x-input v-model:value="inbound.stream.tls.sni" placeholder="Server Name Indication" />
             </a-form-item>
             <a-form-item label="Cipher Suites">
               <a-select v-model:value="inbound.stream.tls.cipherSuites">
@@ -1598,10 +1598,10 @@ watch(
               </a-form-item>
               <template v-if="cert.useFile">
                 <a-form-item :label="t('pages.inbounds.publicKey')">
-                  <a-input v-model:value="cert.certFile" />
+                  <x-input v-model:value="cert.certFile" />
                 </a-form-item>
                 <a-form-item :label="t('pages.inbounds.privatekey')">
-                  <a-input v-model:value="cert.keyFile" />
+                  <x-input v-model:value="cert.keyFile" />
                 </a-form-item>
                 <a-form-item label=" ">
                   <a-button type="primary" :disabled="!defaultCert && !defaultKey" @click="setDefaultCertData(idx)">
@@ -1611,10 +1611,10 @@ watch(
               </template>
               <template v-else>
                 <a-form-item :label="t('pages.inbounds.publicKey')">
-                  <a-textarea v-model:value="cert.cert" :auto-size="{ minRows: 3, maxRows: 8 }" />
+                  <x-input type="textarea" v-model:value="cert.cert" :auto-size="{ minRows: 3, maxRows: 8 }" />
                 </a-form-item>
                 <a-form-item :label="t('pages.inbounds.privatekey')">
-                  <a-textarea v-model:value="cert.key" :auto-size="{ minRows: 3, maxRows: 8 }" />
+                  <x-input type="textarea" v-model:value="cert.key" :auto-size="{ minRows: 3, maxRows: 8 }" />
                 </a-form-item>
               </template>
               <a-form-item label="One Time Loading">
@@ -1633,10 +1633,10 @@ watch(
 
             <!-- ECH (Encrypted Client Hello) -->
             <a-form-item label="ECH key">
-              <a-input v-model:value="inbound.stream.tls.echServerKeys" />
+              <x-input v-model:value="inbound.stream.tls.echServerKeys" />
             </a-form-item>
             <a-form-item label="ECH config">
-              <a-input v-model:value="inbound.stream.tls.settings.echConfigList" />
+              <x-input v-model:value="inbound.stream.tls.settings.echConfigList" />
             </a-form-item>
             <a-form-item label=" ">
               <a-space>
@@ -1651,7 +1651,7 @@ watch(
               <a-switch v-model:checked="inbound.stream.reality.show" />
             </a-form-item>
             <a-form-item label="Xver">
-              <a-input-number v-model:value="inbound.stream.reality.xver" :min="0" />
+              <x-input type="number" v-model:value="inbound.stream.reality.xver" :min="0" />
             </a-form-item>
             <a-form-item label="uTLS">
               <a-select v-model:value="inbound.stream.reality.settings.fingerprint" :style="{ width: '100%' }">
@@ -1663,40 +1663,40 @@ watch(
                 Target
                 <SyncOutlined class="random-icon" @click="randomizeRealityTarget" />
               </template>
-              <a-input v-model:value="inbound.stream.reality.target" />
+              <x-input v-model:value="inbound.stream.reality.target" />
             </a-form-item>
             <a-form-item>
               <template #label>
                 SNI
                 <SyncOutlined class="random-icon" @click="randomizeRealityTarget" />
               </template>
-              <a-input v-model:value="inbound.stream.reality.serverNames" />
+              <x-input v-model:value="inbound.stream.reality.serverNames" />
             </a-form-item>
             <a-form-item label="Max Time Diff (ms)">
-              <a-input-number v-model:value="inbound.stream.reality.maxTimediff" :min="0" />
+              <x-input type="number" v-model:value="inbound.stream.reality.maxTimediff" :min="0" />
             </a-form-item>
             <a-form-item label="Min Client Ver">
-              <a-input v-model:value="inbound.stream.reality.minClientVer" placeholder="25.9.11" />
+              <x-input v-model:value="inbound.stream.reality.minClientVer" placeholder="25.9.11" />
             </a-form-item>
             <a-form-item label="Max Client Ver">
-              <a-input v-model:value="inbound.stream.reality.maxClientVer" placeholder="25.9.11" />
+              <x-input v-model:value="inbound.stream.reality.maxClientVer" placeholder="25.9.11" />
             </a-form-item>
             <a-form-item>
               <template #label>
                 Short IDs
                 <SyncOutlined class="random-icon" @click="randomizeShortIds" />
               </template>
-              <a-textarea v-model:value="inbound.stream.reality.shortIds" :auto-size="{ minRows: 1, maxRows: 4 }" />
+              <x-input type="textarea" v-model:value="inbound.stream.reality.shortIds" :auto-size="{ minRows: 1, maxRows: 4 }" />
             </a-form-item>
             <a-form-item label="SpiderX">
-              <a-input v-model:value="inbound.stream.reality.settings.spiderX" />
+              <x-input v-model:value="inbound.stream.reality.settings.spiderX" />
             </a-form-item>
             <a-form-item :label="t('pages.inbounds.publicKey')">
-              <a-textarea v-model:value="inbound.stream.reality.settings.publicKey"
+              <x-input type="textarea" v-model:value="inbound.stream.reality.settings.publicKey"
                 :auto-size="{ minRows: 1, maxRows: 4 }" />
             </a-form-item>
             <a-form-item :label="t('pages.inbounds.privatekey')">
-              <a-textarea v-model:value="inbound.stream.reality.privateKey" :auto-size="{ minRows: 1, maxRows: 4 }" />
+              <x-input type="textarea" v-model:value="inbound.stream.reality.privateKey" :auto-size="{ minRows: 1, maxRows: 4 }" />
             </a-form-item>
             <a-form-item label=" ">
               <a-space>
@@ -1705,10 +1705,10 @@ watch(
               </a-space>
             </a-form-item>
             <a-form-item label="mldsa65 Seed">
-              <a-textarea v-model:value="inbound.stream.reality.mldsa65Seed" :auto-size="{ minRows: 2, maxRows: 6 }" />
+              <x-input type="textarea" v-model:value="inbound.stream.reality.mldsa65Seed" :auto-size="{ minRows: 2, maxRows: 6 }" />
             </a-form-item>
             <a-form-item label="mldsa65 Verify">
-              <a-textarea v-model:value="inbound.stream.reality.settings.mldsa65Verify"
+              <x-input type="textarea" v-model:value="inbound.stream.reality.settings.mldsa65Verify"
                 :auto-size="{ minRows: 2, maxRows: 6 }" />
             </a-form-item>
             <a-form-item label=" ">
@@ -1739,15 +1739,15 @@ watch(
                   <a-select-option value="tls">TLS</a-select-option>
                 </a-select>
               </a-tooltip>
-              <a-input v-model:value="row.dest" :style="{ width: '30%' }" :placeholder="t('host')" />
+              <x-input v-model:value="row.dest" :style="{ width: '30%' }" :placeholder="t('host')" />
               <a-tooltip :title="t('pages.inbounds.port')">
-                <a-input-number v-model:value="row.port" :style="{ width: '15%' }" :min="1" :max="65535" />
+                <x-input type="number" v-model:value="row.port" :style="{ width: '15%' }" :min="1" :max="65535" />
               </a-tooltip>
-              <a-input v-model:value="row.remark" :style="{ width: '35%' }" :placeholder="t('pages.inbounds.remark')">
+              <x-input v-model:value="row.remark" :style="{ width: '35%' }" :placeholder="t('pages.inbounds.remark')">
                 <template #addonAfter>
                   <MinusOutlined @click="inbound.stream.externalProxy.splice(idx, 1)" />
                 </template>
-              </a-input>
+              </x-input>
             </a-input-group>
           </a-form-item>
 
@@ -1757,22 +1757,22 @@ watch(
           </a-form-item>
           <template v-if="inbound.stream.sockoptSwitch && inbound.stream.sockopt">
             <a-form-item label="Route Mark">
-              <a-input-number v-model:value="inbound.stream.sockopt.mark" :min="0" />
+              <x-input type="number" v-model:value="inbound.stream.sockopt.mark" :min="0" />
             </a-form-item>
             <a-form-item label="TCP Keep Alive Interval">
-              <a-input-number v-model:value="inbound.stream.sockopt.tcpKeepAliveInterval" :min="0" />
+              <x-input type="number" v-model:value="inbound.stream.sockopt.tcpKeepAliveInterval" :min="0" />
             </a-form-item>
             <a-form-item label="TCP Keep Alive Idle">
-              <a-input-number v-model:value="inbound.stream.sockopt.tcpKeepAliveIdle" :min="0" />
+              <x-input type="number" v-model:value="inbound.stream.sockopt.tcpKeepAliveIdle" :min="0" />
             </a-form-item>
             <a-form-item label="TCP Max Seg">
-              <a-input-number v-model:value="inbound.stream.sockopt.tcpMaxSeg" :min="0" />
+              <x-input type="number" v-model:value="inbound.stream.sockopt.tcpMaxSeg" :min="0" />
             </a-form-item>
             <a-form-item label="TCP User Timeout">
-              <a-input-number v-model:value="inbound.stream.sockopt.tcpUserTimeout" :min="0" />
+              <x-input type="number" v-model:value="inbound.stream.sockopt.tcpUserTimeout" :min="0" />
             </a-form-item>
             <a-form-item label="TCP Window Clamp">
-              <a-input-number v-model:value="inbound.stream.sockopt.tcpWindowClamp" :min="0" />
+              <x-input type="number" v-model:value="inbound.stream.sockopt.tcpWindowClamp" :min="0" />
             </a-form-item>
             <a-form-item label="Proxy Protocol">
               <a-switch v-model:checked="inbound.stream.sockopt.acceptProxyProtocol" />
@@ -1807,10 +1807,10 @@ watch(
               </a-select>
             </a-form-item>
             <a-form-item label="Dialer Proxy">
-              <a-input v-model:value="inbound.stream.sockopt.dialerProxy" />
+              <x-input v-model:value="inbound.stream.sockopt.dialerProxy" />
             </a-form-item>
             <a-form-item label="Interface Name">
-              <a-input v-model:value="inbound.stream.sockopt.interfaceName" />
+              <x-input v-model:value="inbound.stream.sockopt.interfaceName" />
             </a-form-item>
             <a-form-item label="Trusted X-Forwarded-For">
               <a-select v-model:value="inbound.stream.sockopt.trustedXForwardedFor" mode="tags"
@@ -1832,7 +1832,7 @@ watch(
                   Version
                 </a-tooltip>
               </template>
-              <a-input-number v-model:value="inbound.stream.hysteria.version" :min="2" :max="2" />
+              <x-input type="number" v-model:value="inbound.stream.hysteria.version" :min="2" :max="2" />
             </a-form-item>
             <a-form-item>
               <template #label>
@@ -1840,7 +1840,7 @@ watch(
                   Obfs password
                 </a-tooltip>
               </template>
-              <a-input v-model:value="inbound.stream.hysteria.auth" />
+              <x-input v-model:value="inbound.stream.hysteria.auth" />
             </a-form-item>
             <a-form-item>
               <template #label>
@@ -1848,7 +1848,7 @@ watch(
                   UDP idle timeout
                 </a-tooltip>
               </template>
-              <a-input-number v-model:value="inbound.stream.hysteria.udpIdleTimeout" :min="0" />
+              <x-input type="number" v-model:value="inbound.stream.hysteria.udpIdleTimeout" :min="0" />
             </a-form-item>
             <a-form-item label="Masquerade">
               <a-switch v-model:checked="inbound.stream.hysteria.masqueradeSwitch" />
@@ -1865,7 +1865,7 @@ watch(
               <!-- Proxy type: url / rewriteHost / insecure -->
               <template v-if="inbound.stream.hysteria.masquerade.type === 'proxy'">
                 <a-form-item label="URL">
-                  <a-input v-model:value="inbound.stream.hysteria.masquerade.url" placeholder="https://example.com" />
+                  <x-input v-model:value="inbound.stream.hysteria.masquerade.url" placeholder="https://example.com" />
                 </a-form-item>
                 <a-form-item label="Rewrite Host">
                   <a-switch v-model:checked="inbound.stream.hysteria.masquerade.rewriteHost" />
@@ -1877,17 +1877,17 @@ watch(
 
               <!-- File type: dir -->
               <a-form-item v-if="inbound.stream.hysteria.masquerade.type === 'file'" label="Directory">
-                <a-input v-model:value="inbound.stream.hysteria.masquerade.dir" placeholder="/path/to/www" />
+                <x-input v-model:value="inbound.stream.hysteria.masquerade.dir" placeholder="/path/to/www" />
               </a-form-item>
 
               <!-- String type: content / statusCode / headers -->
               <template v-if="inbound.stream.hysteria.masquerade.type === 'string'">
                 <a-form-item label="Content">
-                  <a-textarea v-model:value="inbound.stream.hysteria.masquerade.content"
+                  <x-input type="textarea" v-model:value="inbound.stream.hysteria.masquerade.content"
                     :auto-size="{ minRows: 2, maxRows: 6 }" />
                 </a-form-item>
                 <a-form-item label="Status Code">
-                  <a-input-number v-model:value="inbound.stream.hysteria.masquerade.statusCode" :min="100" :max="599"
+                  <x-input type="number" v-model:value="inbound.stream.hysteria.masquerade.statusCode" :min="100" :max="599"
                     placeholder="200" />
                 </a-form-item>
                 <a-form-item label="Headers">
@@ -1900,10 +1900,10 @@ watch(
                 <a-form-item v-if="inbound.stream.hysteria.masquerade.headers.length > 0" :wrapper-col="{ span: 24 }">
                   <a-input-group v-for="(h, idx) in inbound.stream.hysteria.masquerade.headers" :key="`mh-${idx}`"
                     compact class="mb-8">
-                    <a-input :style="{ width: '45%' }" v-model:value="h.name" placeholder="Name">
+                    <x-input :style="{ width: '45%' }" v-model:value="h.name" placeholder="Name">
                       <template #addonBefore>{{ idx + 1 }}</template>
-                    </a-input>
-                    <a-input :style="{ width: '45%' }" v-model:value="h.value" placeholder="Value" />
+                    </x-input>
+                    <x-input :style="{ width: '45%' }" v-model:value="h.value" placeholder="Value" />
                     <a-button @click="inbound.stream.hysteria.masquerade.removeHeader(idx)">
                       <template #icon>
                         <MinusOutlined />

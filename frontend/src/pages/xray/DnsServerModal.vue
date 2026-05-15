@@ -101,16 +101,16 @@ const title = computed(() =>
     @ok="onOk" @cancel="close">
     <a-form :colon="false" :label-col="{ md: { span: 8 } }" :wrapper-col="{ md: { span: 14 } }">
       <a-form-item :label="t('pages.inbounds.address')">
-        <a-input v-model:value="form.address" />
+        <x-input v-model:value="form.address" />
       </a-form-item>
       <a-form-item :label="t('pages.inbounds.port')">
-        <a-input-number v-model:value="form.port" :min="1" :max="65535" />
+        <x-input type="number" v-model:value="form.port" :min="1" :max="65535" />
       </a-form-item>
       <a-form-item :label="t('pages.xray.dns.tag')">
-        <a-input v-model:value="form.tag" />
+        <x-input v-model:value="form.tag" />
       </a-form-item>
       <a-form-item :label="t('pages.xray.dns.clientIp')">
-        <a-input v-model:value="form.clientIP" />
+        <x-input v-model:value="form.clientIP" />
       </a-form-item>
       <a-form-item :label="t('pages.xray.dns.strategy')">
         <a-select v-model:value="form.queryStrategy" :style="{ width: '100%' }">
@@ -118,7 +118,7 @@ const title = computed(() =>
         </a-select>
       </a-form-item>
       <a-form-item :label="t('pages.xray.dns.timeoutMs')">
-        <a-input-number v-model:value="form.timeoutMs" :min="0" :step="500" />
+        <x-input type="number" v-model:value="form.timeoutMs" :min="0" :step="500" />
       </a-form-item>
 
       <a-divider :style="{ margin: '5px 0' }" />
@@ -130,11 +130,11 @@ const title = computed(() =>
           </template>
         </a-button>
         <template v-for="(_, idx) in form.domains" :key="`d${idx}`">
-          <a-input v-model:value="form.domains[idx]" :style="{ marginTop: '4px' }">
+          <x-input v-model:value="form.domains[idx]" :style="{ marginTop: '4px' }">
             <template #addonAfter>
               <MinusOutlined @click="form.domains.splice(idx, 1)" />
             </template>
-          </a-input>
+          </x-input>
         </template>
       </a-form-item>
 
@@ -145,11 +145,11 @@ const title = computed(() =>
           </template>
         </a-button>
         <template v-for="(_, idx) in form.expectedIPs" :key="`e${idx}`">
-          <a-input v-model:value="form.expectedIPs[idx]" :style="{ marginTop: '4px' }">
+          <x-input v-model:value="form.expectedIPs[idx]" :style="{ marginTop: '4px' }">
             <template #addonAfter>
               <MinusOutlined @click="form.expectedIPs.splice(idx, 1)" />
             </template>
-          </a-input>
+          </x-input>
         </template>
       </a-form-item>
 
@@ -160,11 +160,11 @@ const title = computed(() =>
           </template>
         </a-button>
         <template v-for="(_, idx) in form.unexpectedIPs" :key="`u${idx}`">
-          <a-input v-model:value="form.unexpectedIPs[idx]" :style="{ marginTop: '4px' }">
+          <x-input v-model:value="form.unexpectedIPs[idx]" :style="{ marginTop: '4px' }">
             <template #addonAfter>
               <MinusOutlined @click="form.unexpectedIPs.splice(idx, 1)" />
             </template>
-          </a-input>
+          </x-input>
         </template>
       </a-form-item>
 
@@ -183,7 +183,7 @@ const title = computed(() =>
         <a-switch v-model:checked="form.serveStale" />
       </a-form-item>
       <a-form-item :label="t('pages.xray.dns.serveExpiredTTL')">
-        <a-input-number v-model:value="form.serveExpiredTTL" :min="0" :step="60" />
+        <x-input type="number" v-model:value="form.serveExpiredTTL" :min="0" :step="60" />
       </a-form-item>
     </a-form>
   </a-modal>

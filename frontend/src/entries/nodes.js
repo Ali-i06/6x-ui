@@ -1,3 +1,4 @@
+import XInput from '@/components/Input.vue';
 import { createApp } from 'vue';
 import Antd, { message } from 'ant-design-vue';
 import 'ant-design-vue/dist/reset.css';
@@ -16,4 +17,4 @@ if (messageContainer) {
   message.config({ getContainer: () => messageContainer });
 }
 
-createApp(NodesPage).use(Antd).use(i18n).mount('#app');
+createApp(NodesPage).use(Antd).use(i18n).component('x-input', XInput).mount('#app');

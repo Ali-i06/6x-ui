@@ -265,7 +265,7 @@ function updateFakednsField(idx, field, value) {
           <template #title>{{ t('pages.xray.dns.tag') }}</template>
           <template #description>{{ t('pages.xray.dns.tagDesc') }}</template>
           <template #control>
-            <a-input v-model:value="dnsTag" />
+            <x-input v-model:value="dnsTag" />
           </template>
         </SettingListItem>
 
@@ -273,7 +273,7 @@ function updateFakednsField(idx, field, value) {
           <template #title>{{ t('pages.xray.dns.clientIp') }}</template>
           <template #description>{{ t('pages.xray.dns.clientIpDesc') }}</template>
           <template #control>
-            <a-input v-model:value="dnsClientIp" />
+            <x-input v-model:value="dnsClientIp" />
           </template>
         </SettingListItem>
 
@@ -339,7 +339,7 @@ function updateFakednsField(idx, field, value) {
           <template #title>{{ t('pages.xray.dns.serveExpiredTTL') }}</template>
           <template #description>{{ t('pages.xray.dns.serveExpiredTTLDesc') }}</template>
           <template #control>
-            <a-input-number v-model:value="dnsServeExpiredTTL" :min="0" :step="60" :style="{ width: '100%' }" />
+            <x-input type="number" v-model:value="dnsServeExpiredTTL" :min="0" :step="60" :style="{ width: '100%' }" />
           </template>
         </SettingListItem>
       </template>
@@ -365,7 +365,7 @@ function updateFakednsField(idx, field, value) {
             {{ t('pages.xray.dns.hostsAdd') }}
           </a-button>
           <div v-for="(row, idx) in hostsList" :key="`h${idx}`" class="hosts-row">
-            <a-input v-model:value="row.domain" :placeholder="t('pages.xray.dns.hostsDomain')"
+            <x-input v-model:value="row.domain" :placeholder="t('pages.xray.dns.hostsDomain')"
               :style="{ flex: '1 1 220px' }" />
             <a-select v-model:value="row.values" mode="tags" :placeholder="t('pages.xray.dns.hostsValues')"
               :style="{ flex: '2 1 320px' }" :token-separators="[',', ' ']" />
@@ -489,11 +489,11 @@ function updateFakednsField(idx, field, value) {
                 </a-space>
               </template>
               <template v-else-if="column.key === 'ipPool'">
-                <a-input :value="record.ipPool" size="small"
+                <x-input :value="record.ipPool" size="small"
                   @change="(e) => updateFakednsField(index, 'ipPool', e.target.value)" />
               </template>
               <template v-else-if="column.key === 'poolSize'">
-                <a-input-number :value="record.poolSize" :min="1" size="small"
+                <x-input type="number" :value="record.poolSize" :min="1" size="small"
                   @change="(v) => updateFakednsField(index, 'poolSize', v)" />
               </template>
             </template>

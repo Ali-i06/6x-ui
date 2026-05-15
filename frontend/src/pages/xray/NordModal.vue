@@ -242,7 +242,7 @@ function loadColor(load) {
         <a-tab-pane key="token" tab="Access token">
           <a-form :colon="false" :label-col="{ md: { span: 6 } }" :wrapper-col="{ md: { span: 18 } }" class="mt-20">
             <a-form-item label="Access token">
-              <a-input v-model:value="token" placeholder="Access token" />
+              <x-input v-model:value="token" placeholder="Access token" />
               <a-button type="primary" class="mt-10" :loading="loading" @click="login">
                 <template #icon>
                   <LoginOutlined />
@@ -255,7 +255,7 @@ function loadColor(load) {
         <a-tab-pane key="key" tab="Private key">
           <a-form :colon="false" :label-col="{ md: { span: 6 } }" :wrapper-col="{ md: { span: 18 } }" class="mt-20">
             <a-form-item label="Private key">
-              <a-input v-model:value="manualKey" placeholder="Private key" />
+              <x-input v-model:value="manualKey" placeholder="Private key" />
               <a-button type="primary" class="mt-10" :loading="loading" @click="saveKey">
                 <template #icon>
                   <SaveOutlined />

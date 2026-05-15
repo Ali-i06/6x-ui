@@ -147,7 +147,7 @@ const PROTOCOLS = ['http', 'tls', 'bittorrent', 'quic'];
             <QuestionCircleOutlined />
           </a-tooltip>
         </template>
-        <a-input v-model:value="form.sourceIP" placeholder="0.0.0.0/8, fc00::/7, geoip:ir" />
+        <x-input v-model:value="form.sourceIP" placeholder="0.0.0.0/8, fc00::/7, geoip:ir" />
       </a-form-item>
 
       <a-form-item>
@@ -157,7 +157,7 @@ const PROTOCOLS = ['http', 'tls', 'bittorrent', 'quic'];
             <QuestionCircleOutlined />
           </a-tooltip>
         </template>
-        <a-input v-model:value="form.sourcePort" placeholder="53,443,1000-2000" />
+        <x-input v-model:value="form.sourcePort" placeholder="53,443,1000-2000" />
       </a-form-item>
 
       <a-form-item>
@@ -167,7 +167,7 @@ const PROTOCOLS = ['http', 'tls', 'bittorrent', 'quic'];
             <QuestionCircleOutlined />
           </a-tooltip>
         </template>
-        <a-input v-model:value="form.vlessRoute" placeholder="53,443,1000-2000" />
+        <x-input v-model:value="form.vlessRoute" placeholder="53,443,1000-2000" />
       </a-form-item>
 
       <a-form-item label="Network">
@@ -191,10 +191,10 @@ const PROTOCOLS = ['http', 'tls', 'bittorrent', 'quic'];
       </a-form-item>
       <a-form-item :wrapper-col="{ span: 24 }">
         <a-input-group v-for="(attr, idx) in form.attrs" :key="idx" compact class="mb-8">
-          <a-input :style="{ width: '45%' }" v-model:value="attr[0]" placeholder="Name">
+          <x-input :style="{ width: '45%' }" v-model:value="attr[0]" placeholder="Name">
             <template #addonBefore>{{ idx + 1 }}</template>
-          </a-input>
-          <a-input :style="{ width: '45%' }" v-model:value="attr[1]" placeholder="Value" />
+          </x-input>
+          <x-input :style="{ width: '45%' }" v-model:value="attr[1]" placeholder="Value" />
           <a-button @click="form.attrs.splice(idx, 1)">
             <template #icon>
               <MinusOutlined />
@@ -209,7 +209,7 @@ const PROTOCOLS = ['http', 'tls', 'bittorrent', 'quic'];
             <QuestionCircleOutlined />
           </a-tooltip>
         </template>
-        <a-input v-model:value="form.ip" placeholder="0.0.0.0/8, fc00::/7, geoip:ir" />
+        <x-input v-model:value="form.ip" placeholder="0.0.0.0/8, fc00::/7, geoip:ir" />
       </a-form-item>
 
       <a-form-item>
@@ -218,7 +218,7 @@ const PROTOCOLS = ['http', 'tls', 'bittorrent', 'quic'];
             <QuestionCircleOutlined />
           </a-tooltip>
         </template>
-        <a-input v-model:value="form.domain" placeholder="google.com, geosite:cn" />
+        <x-input v-model:value="form.domain" placeholder="google.com, geosite:cn" />
       </a-form-item>
 
       <a-form-item>
@@ -227,7 +227,7 @@ const PROTOCOLS = ['http', 'tls', 'bittorrent', 'quic'];
             <QuestionCircleOutlined />
           </a-tooltip>
         </template>
-        <a-input v-model:value="form.user" placeholder="email address" />
+        <x-input v-model:value="form.user" placeholder="email address" />
       </a-form-item>
 
       <a-form-item>
@@ -236,7 +236,7 @@ const PROTOCOLS = ['http', 'tls', 'bittorrent', 'quic'];
             <QuestionCircleOutlined />
           </a-tooltip>
         </template>
-        <a-input v-model:value="form.port" placeholder="53,443,1000-2000" />
+        <x-input v-model:value="form.port" placeholder="53,443,1000-2000" />
       </a-form-item>
 
       <a-form-item label="Inbound tags">

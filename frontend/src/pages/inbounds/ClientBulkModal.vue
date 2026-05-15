@@ -190,19 +190,19 @@ async function submit() {
       </a-form-item>
 
       <a-form-item v-if="form.emailMethod > 1" :label="t('pages.client.first')">
-        <a-input-number v-model:value="form.firstNum" :min="1" />
+        <x-input type="number" v-model:value="form.firstNum" :min="1" />
       </a-form-item>
       <a-form-item v-if="form.emailMethod > 1" :label="t('pages.client.last')">
-        <a-input-number v-model:value="form.lastNum" :min="form.firstNum" />
+        <x-input type="number" v-model:value="form.lastNum" :min="form.firstNum" />
       </a-form-item>
       <a-form-item v-if="form.emailMethod > 0" :label="t('pages.client.prefix')">
-        <a-input v-model:value="form.emailPrefix" />
+        <x-input v-model:value="form.emailPrefix" />
       </a-form-item>
       <a-form-item v-if="form.emailMethod > 2" :label="t('pages.client.postfix')">
-        <a-input v-model:value="form.emailPostfix" />
+        <x-input v-model:value="form.emailPostfix" />
       </a-form-item>
       <a-form-item v-if="form.emailMethod < 2" :label="t('pages.client.clientCount')">
-        <a-input-number v-model:value="form.quantity" :min="1" :max="500" />
+        <x-input type="number" v-model:value="form.quantity" :min="1" :max="500" />
       </a-form-item>
 
       <a-form-item v-if="inbound.protocol === Protocols.VMESS" :label="t('security')">
@@ -223,26 +223,26 @@ async function submit() {
           {{ t('subscription.title') }}
           <SyncOutlined class="random-icon" @click="form.subId = RandomUtil.randomLowerAndNum(16)" />
         </template>
-        <a-input v-model:value="form.subId" />
+        <x-input v-model:value="form.subId" />
       </a-form-item>
 
       <a-form-item v-if="tgBotEnable" label="Telegram ID">
-        <a-input-number v-model:value="form.tgId" :min="0" :style="{ width: '50%' }" />
+        <x-input type="number" v-model:value="form.tgId" :min="0" :style="{ width: '50%' }" />
       </a-form-item>
 
       <a-form-item :label="t('comment')">
-        <a-input v-model:value="form.comment" />
+        <x-input v-model:value="form.comment" />
       </a-form-item>
 
       <a-form-item v-if="ipLimitEnable" :label="t('pages.inbounds.IPLimit')">
-        <a-input-number v-model:value="form.limitIp" :min="0" />
+        <x-input type="number" v-model:value="form.limitIp" :min="0" />
       </a-form-item>
 
       <a-form-item>
         <template #label>
           <a-tooltip :title="t('pages.inbounds.meansNoLimit')">{{ t('pages.inbounds.totalFlow') }}</a-tooltip>
         </template>
-        <a-input-number v-model:value="form.totalGB" :min="0" :step="0.1" />
+        <x-input type="number" v-model:value="form.totalGB" :min="0" :step="0.1" />
       </a-form-item>
 
       <a-form-item :label="t('pages.client.delayedStart')">
@@ -250,7 +250,7 @@ async function submit() {
       </a-form-item>
 
       <a-form-item v-if="delayedStart" :label="t('pages.client.expireDays')">
-        <a-input-number v-model:value="delayedExpireDays" :min="0" />
+        <x-input type="number" v-model:value="delayedExpireDays" :min="0" />
       </a-form-item>
 
       <a-form-item v-else>
@@ -265,7 +265,7 @@ async function submit() {
         <template #label>
           <a-tooltip :title="t('pages.client.renewDesc')">{{ t('pages.client.renew') }}</a-tooltip>
         </template>
-        <a-input-number v-model:value="form.reset" :min="0" />
+        <x-input type="number" v-model:value="form.reset" :min="0" />
       </a-form-item>
     </a-form>
   </a-modal>

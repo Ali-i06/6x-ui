@@ -117,7 +117,7 @@ onMounted(loadInboundTags);
         <template #title>{{ t('pages.settings.panelListeningIP') }}</template>
         <template #description>{{ t('pages.settings.panelListeningIPDesc') }}</template>
         <template #control>
-          <a-input v-model:value="allSetting.webListen" type="text" />
+          <x-input v-model:value="allSetting.webListen" type="text" />
         </template>
       </SettingListItem>
 
@@ -125,7 +125,7 @@ onMounted(loadInboundTags);
         <template #title>{{ t('pages.settings.panelListeningDomain') }}</template>
         <template #description>{{ t('pages.settings.panelListeningDomainDesc') }}</template>
         <template #control>
-          <a-input v-model:value="allSetting.webDomain" type="text" />
+          <x-input v-model:value="allSetting.webDomain" type="text" />
         </template>
       </SettingListItem>
 
@@ -133,7 +133,7 @@ onMounted(loadInboundTags);
         <template #title>{{ t('pages.settings.panelPort') }}</template>
         <template #description>{{ t('pages.settings.panelPortDesc') }}</template>
         <template #control>
-          <a-input-number v-model:value="allSetting.webPort" :min="1" :max="65535" :style="{ width: '100%' }" />
+          <x-input type="number" v-model:value="allSetting.webPort" :min="1" :max="65535" :style="{ width: '100%' }" />
         </template>
       </SettingListItem>
 
@@ -141,7 +141,7 @@ onMounted(loadInboundTags);
         <template #title>{{ t('pages.settings.panelUrlPath') }}</template>
         <template #description>{{ t('pages.settings.panelUrlPathDesc') }}</template>
         <template #control>
-          <a-input v-model:value="allSetting.webBasePath" type="text" />
+          <x-input v-model:value="allSetting.webBasePath" type="text" />
         </template>
       </SettingListItem>
 
@@ -149,7 +149,7 @@ onMounted(loadInboundTags);
         <template #title>{{ t('pages.settings.sessionMaxAge') }}</template>
         <template #description>{{ t('pages.settings.sessionMaxAgeDesc') }}</template>
         <template #control>
-          <a-input-number v-model:value="allSetting.sessionMaxAge" :min="60" :style="{ width: '100%' }" />
+          <x-input type="number" v-model:value="allSetting.sessionMaxAge" :min="60" :style="{ width: '100%' }" />
         </template>
       </SettingListItem>
 
@@ -157,7 +157,7 @@ onMounted(loadInboundTags);
         <template #title>Trusted proxy CIDRs</template>
         <template #description>Comma-separated IPs/CIDRs allowed to set forwarded host, proto, and client IP headers.</template>
         <template #control>
-          <a-input v-model:value="allSetting.trustedProxyCIDRs" placeholder="127.0.0.1/32,::1/128" />
+          <x-input v-model:value="allSetting.trustedProxyCIDRs" placeholder="127.0.0.1/32,::1/128" />
         </template>
       </SettingListItem>
 
@@ -165,7 +165,7 @@ onMounted(loadInboundTags);
         <template #title>{{ t('pages.settings.pageSize') }}</template>
         <template #description>{{ t('pages.settings.pageSizeDesc') }}</template>
         <template #control>
-          <a-input-number v-model:value="allSetting.pageSize" :min="0" :step="5" :style="{ width: '100%' }" />
+          <x-input type="number" v-model:value="allSetting.pageSize" :min="0" :step="5" :style="{ width: '100%' }" />
         </template>
       </SettingListItem>
 
@@ -188,7 +188,7 @@ onMounted(loadInboundTags);
         <template #title>{{ t('pages.settings.expireTimeDiff') }}</template>
         <template #description>{{ t('pages.settings.expireTimeDiffDesc') }}</template>
         <template #control>
-          <a-input-number v-model:value="allSetting.expireDiff" :min="0" :style="{ width: '100%' }" />
+          <x-input type="number" v-model:value="allSetting.expireDiff" :min="0" :style="{ width: '100%' }" />
         </template>
       </SettingListItem>
 
@@ -196,7 +196,7 @@ onMounted(loadInboundTags);
         <template #title>{{ t('pages.settings.trafficDiff') }}</template>
         <template #description>{{ t('pages.settings.trafficDiffDesc') }}</template>
         <template #control>
-          <a-input-number v-model:value="allSetting.trafficDiff" :min="0" :style="{ width: '100%' }" />
+          <x-input type="number" v-model:value="allSetting.trafficDiff" :min="0" :style="{ width: '100%' }" />
         </template>
       </SettingListItem>
     </a-collapse-panel>
@@ -206,7 +206,7 @@ onMounted(loadInboundTags);
         <template #title>{{ t('pages.settings.publicKeyPath') }}</template>
         <template #description>{{ t('pages.settings.publicKeyPathDesc') }}</template>
         <template #control>
-          <a-input v-model:value="allSetting.webCertFile" type="text" />
+          <x-input v-model:value="allSetting.webCertFile" type="text" />
         </template>
       </SettingListItem>
 
@@ -214,7 +214,7 @@ onMounted(loadInboundTags);
         <template #title>{{ t('pages.settings.privateKeyPath') }}</template>
         <template #description>{{ t('pages.settings.privateKeyPathDesc') }}</template>
         <template #control>
-          <a-input v-model:value="allSetting.webKeyFile" type="text" />
+          <x-input v-model:value="allSetting.webKeyFile" type="text" />
         </template>
       </SettingListItem>
     </a-collapse-panel>
@@ -232,7 +232,7 @@ onMounted(loadInboundTags);
         <template #title>{{ t('pages.settings.externalTrafficInformURI') }}</template>
         <template #description>{{ t('pages.settings.externalTrafficInformURIDesc') }}</template>
         <template #control>
-          <a-input v-model:value="allSetting.externalTrafficInformURI" placeholder="(http|https)://domain[:port]/path/"
+          <x-input v-model:value="allSetting.externalTrafficInformURI" placeholder="(http|https)://domain[:port]/path/"
             type="text" />
         </template>
       </SettingListItem>
@@ -251,7 +251,7 @@ onMounted(loadInboundTags);
         <template #title>{{ t('pages.settings.timeZone') }}</template>
         <template #description>{{ t('pages.settings.timeZoneDesc') }}</template>
         <template #control>
-          <a-input v-model:value="allSetting.timeLocation" type="text" />
+          <x-input v-model:value="allSetting.timeLocation" type="text" />
         </template>
       </SettingListItem>
 
@@ -279,14 +279,14 @@ onMounted(loadInboundTags);
       <SettingListItem paddings="small">
         <template #title>LDAP host</template>
         <template #control>
-          <a-input v-model:value="allSetting.ldapHost" type="text" />
+          <x-input v-model:value="allSetting.ldapHost" type="text" />
         </template>
       </SettingListItem>
 
       <SettingListItem paddings="small">
         <template #title>LDAP port</template>
         <template #control>
-          <a-input-number v-model:value="allSetting.ldapPort" :min="1" :max="65535" :style="{ width: '100%' }" />
+          <x-input type="number" v-model:value="allSetting.ldapPort" :min="1" :max="65535" :style="{ width: '100%' }" />
         </template>
       </SettingListItem>
 
@@ -300,7 +300,7 @@ onMounted(loadInboundTags);
       <SettingListItem paddings="small">
         <template #title>Bind DN</template>
         <template #control>
-          <a-input v-model:value="allSetting.ldapBindDN" type="text" />
+          <x-input v-model:value="allSetting.ldapBindDN" type="text" />
         </template>
       </SettingListItem>
 
@@ -310,7 +310,7 @@ onMounted(loadInboundTags);
           {{ allSetting.hasLdapPassword ? 'Configured; leave blank to keep current password.' : 'Not configured.' }}
         </template>
         <template #control>
-          <a-input-password v-model:value="allSetting.ldapPassword"
+          <x-input type="password" v-model:value="allSetting.ldapPassword"
             :placeholder="allSetting.hasLdapPassword ? 'Configured - enter a new value to replace' : ''" />
         </template>
       </SettingListItem>
@@ -318,28 +318,28 @@ onMounted(loadInboundTags);
       <SettingListItem paddings="small">
         <template #title>Base DN</template>
         <template #control>
-          <a-input v-model:value="allSetting.ldapBaseDN" type="text" />
+          <x-input v-model:value="allSetting.ldapBaseDN" type="text" />
         </template>
       </SettingListItem>
 
       <SettingListItem paddings="small">
         <template #title>User filter</template>
         <template #control>
-          <a-input v-model:value="allSetting.ldapUserFilter" type="text" />
+          <x-input v-model:value="allSetting.ldapUserFilter" type="text" />
         </template>
       </SettingListItem>
 
       <SettingListItem paddings="small">
         <template #title>User attribute (username/email)</template>
         <template #control>
-          <a-input v-model:value="allSetting.ldapUserAttr" type="text" />
+          <x-input v-model:value="allSetting.ldapUserAttr" type="text" />
         </template>
       </SettingListItem>
 
       <SettingListItem paddings="small">
         <template #title>VLESS flag attribute</template>
         <template #control>
-          <a-input v-model:value="allSetting.ldapVlessField" type="text" />
+          <x-input v-model:value="allSetting.ldapVlessField" type="text" />
         </template>
       </SettingListItem>
 
@@ -347,7 +347,7 @@ onMounted(loadInboundTags);
         <template #title>Generic flag attribute (optional)</template>
         <template #description>If set, overrides VLESS flag — e.g. shadowInactive.</template>
         <template #control>
-          <a-input v-model:value="allSetting.ldapFlagField" type="text" />
+          <x-input v-model:value="allSetting.ldapFlagField" type="text" />
         </template>
       </SettingListItem>
 
@@ -355,7 +355,7 @@ onMounted(loadInboundTags);
         <template #title>Truthy values</template>
         <template #description>Comma-separated; default: true,1,yes,on</template>
         <template #control>
-          <a-input v-model:value="allSetting.ldapTruthyValues" type="text" />
+          <x-input v-model:value="allSetting.ldapTruthyValues" type="text" />
         </template>
       </SettingListItem>
 
@@ -371,7 +371,7 @@ onMounted(loadInboundTags);
         <template #title>Sync schedule</template>
         <template #description>Cron-like string, e.g. @every 1m</template>
         <template #control>
-          <a-input v-model:value="allSetting.ldapSyncCron" type="text" />
+          <x-input v-model:value="allSetting.ldapSyncCron" type="text" />
         </template>
       </SettingListItem>
 
@@ -407,21 +407,21 @@ onMounted(loadInboundTags);
       <SettingListItem paddings="small">
         <template #title>Default total (GB)</template>
         <template #control>
-          <a-input-number v-model:value="allSetting.ldapDefaultTotalGB" :min="0" :style="{ width: '100%' }" />
+          <x-input type="number" v-model:value="allSetting.ldapDefaultTotalGB" :min="0" :style="{ width: '100%' }" />
         </template>
       </SettingListItem>
 
       <SettingListItem paddings="small">
         <template #title>Default expiry (days)</template>
         <template #control>
-          <a-input-number v-model:value="allSetting.ldapDefaultExpiryDays" :min="0" :style="{ width: '100%' }" />
+          <x-input type="number" v-model:value="allSetting.ldapDefaultExpiryDays" :min="0" :style="{ width: '100%' }" />
         </template>
       </SettingListItem>
 
       <SettingListItem paddings="small">
         <template #title>Default IP limit</template>
         <template #control>
-          <a-input-number v-model:value="allSetting.ldapDefaultLimitIP" :min="0" :style="{ width: '100%' }" />
+          <x-input type="number" v-model:value="allSetting.ldapDefaultLimitIP" :min="0" :style="{ width: '100%' }" />
         </template>
       </SettingListItem>
     </a-collapse-panel>

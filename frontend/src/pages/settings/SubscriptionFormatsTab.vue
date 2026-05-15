@@ -215,7 +215,7 @@ const directDomains = computed({
         <template #title>JSON {{ t('pages.settings.subPath') }}</template>
         <template #description>{{ t('pages.settings.subPathDesc') }}</template>
         <template #control>
-          <a-input v-model:value="subJsonPath" type="text" placeholder="/json/" @blur="normalizePath('subJsonPath')" />
+          <x-input v-model:value="subJsonPath" type="text" placeholder="/json/" @blur="normalizePath('subJsonPath')" />
         </template>
       </SettingListItem>
 
@@ -223,7 +223,7 @@ const directDomains = computed({
         <template #title>JSON {{ t('pages.settings.subURI') }}</template>
         <template #description>{{ t('pages.settings.subURIDesc') }}</template>
         <template #control>
-          <a-input v-model:value="allSetting.subJsonURI" type="text" placeholder="(http|https)://domain[:port]/path/" />
+          <x-input v-model:value="allSetting.subJsonURI" type="text" placeholder="(http|https)://domain[:port]/path/" />
         </template>
       </SettingListItem>
 
@@ -231,7 +231,7 @@ const directDomains = computed({
         <template #title>Clash {{ t('pages.settings.subPath') }}</template>
         <template #description>{{ t('pages.settings.subPathDesc') }}</template>
         <template #control>
-          <a-input v-model:value="subClashPath" type="text" placeholder="/clash/"
+          <x-input v-model:value="subClashPath" type="text" placeholder="/clash/"
             @blur="normalizePath('subClashPath')" />
         </template>
       </SettingListItem>
@@ -240,7 +240,7 @@ const directDomains = computed({
         <template #title>Clash {{ t('pages.settings.subURI') }}</template>
         <template #description>{{ t('pages.settings.subURIDesc') }}</template>
         <template #control>
-          <a-input v-model:value="allSetting.subClashURI" type="text"
+          <x-input v-model:value="allSetting.subClashURI" type="text"
             placeholder="(http|https)://domain[:port]/path/" />
         </template>
       </SettingListItem>
@@ -261,25 +261,25 @@ const directDomains = computed({
             <SettingListItem paddings="small">
               <template #title>Packets</template>
               <template #control>
-                <a-input v-model:value="fragmentPackets" placeholder="1-1 | 1-3 | tlshello | …" />
+                <x-input v-model:value="fragmentPackets" placeholder="1-1 | 1-3 | tlshello | …" />
               </template>
             </SettingListItem>
             <SettingListItem paddings="small">
               <template #title>Length</template>
               <template #control>
-                <a-input v-model:value="fragmentLength" placeholder="100-200" />
+                <x-input v-model:value="fragmentLength" placeholder="100-200" />
               </template>
             </SettingListItem>
             <SettingListItem paddings="small">
               <template #title>Interval</template>
               <template #control>
-                <a-input v-model:value="fragmentInterval" placeholder="10-20" />
+                <x-input v-model:value="fragmentInterval" placeholder="10-20" />
               </template>
             </SettingListItem>
             <SettingListItem paddings="small">
               <template #title>Max split</template>
               <template #control>
-                <a-input v-model:value="fragmentMaxSplit" placeholder="300-400" />
+                <x-input v-model:value="fragmentMaxSplit" placeholder="300-400" />
               </template>
             </SettingListItem>
           </a-collapse-panel>
@@ -313,14 +313,14 @@ const directDomains = computed({
             <SettingListItem paddings="small">
               <template #title>Packet</template>
               <template #control>
-                <a-input :value="noise.packet" placeholder="5-10"
+                <x-input :value="noise.packet" placeholder="5-10"
                   @input="(e) => updateNoiseField(index, 'packet', e.target.value)" />
               </template>
             </SettingListItem>
             <SettingListItem paddings="small">
               <template #title>Delay (ms)</template>
               <template #control>
-                <a-input :value="noise.delay" placeholder="10-20"
+                <x-input :value="noise.delay" placeholder="10-20"
                   @input="(e) => updateNoiseField(index, 'delay', e.target.value)" />
               </template>
             </SettingListItem>
@@ -363,13 +363,13 @@ const directDomains = computed({
             <SettingListItem paddings="small">
               <template #title>Concurrency</template>
               <template #control>
-                <a-input-number v-model:value="muxConcurrency" :min="-1" :max="1024" :style="{ width: '100%' }" />
+                <x-input type="number" v-model:value="muxConcurrency" :min="-1" :max="1024" :style="{ width: '100%' }" />
               </template>
             </SettingListItem>
             <SettingListItem paddings="small">
               <template #title>xudp concurrency</template>
               <template #control>
-                <a-input-number v-model:value="muxXudpConcurrency" :min="-1" :max="1024" :style="{ width: '100%' }" />
+                <x-input type="number" v-model:value="muxXudpConcurrency" :min="-1" :max="1024" :style="{ width: '100%' }" />
               </template>
             </SettingListItem>
             <SettingListItem paddings="small">

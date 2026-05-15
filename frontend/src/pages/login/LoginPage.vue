@@ -143,30 +143,30 @@ function cycleTheme() {
 
             <a-form layout="vertical" class="login-form" @submit.prevent="login">
               <a-form-item :label="t('username')">
-                <a-input v-model:value="user.username" autocomplete="username" name="username" size="large"
+                <x-input v-model:value="user.username" autocomplete="username" name="username" size="large"
                   :placeholder="t('username')" autofocus required>
                   <template #prefix>
                     <UserOutlined />
                   </template>
-                </a-input>
+                </x-input>
               </a-form-item>
 
               <a-form-item :label="t('password')">
-                <a-input-password v-model:value="user.password" autocomplete="current-password" name="password"
+                <x-input type="password" v-model:value="user.password" autocomplete="current-password" name="password"
                   size="large" :placeholder="t('password')" required>
                   <template #prefix>
                     <LockOutlined />
                   </template>
-                </a-input-password>
+                </x-input>
               </a-form-item>
 
               <a-form-item v-if="twoFactorEnable" :label="t('twoFactorCode')">
-                <a-input v-model:value="user.twoFactorCode" autocomplete="one-time-code" name="twoFactorCode"
+                <x-input v-model:value="user.twoFactorCode" autocomplete="one-time-code" name="twoFactorCode"
                   size="large" :placeholder="t('twoFactorCode')" required>
                   <template #prefix>
                     <KeyOutlined />
                   </template>
-                </a-input>
+                </x-input>
               </a-form-item>
 
               <a-form-item class="submit-row">

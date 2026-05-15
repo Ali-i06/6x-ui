@@ -253,7 +253,7 @@ const title = computed(() =>
           {{ t('pages.inbounds.email') }}
           <SyncOutlined class="random-icon" @click="randomEmail" />
         </template>
-        <a-input v-model:value="client.email" />
+        <x-input v-model:value="client.email" />
       </a-form-item>
 
       <a-form-item v-if="isTrojanOrSS">
@@ -261,7 +261,7 @@ const title = computed(() =>
           {{ t('password') }}
           <SyncOutlined class="random-icon" @click="randomPassword" />
         </template>
-        <a-input v-model:value="client.password" />
+        <x-input v-model:value="client.password" />
       </a-form-item>
 
       <a-form-item v-if="protocol === Protocols.HYSTERIA">
@@ -269,7 +269,7 @@ const title = computed(() =>
           {{ t('password') }}
           <SyncOutlined class="random-icon" @click="randomAuth" />
         </template>
-        <a-input v-model:value="client.auth" />
+        <x-input v-model:value="client.auth" />
       </a-form-item>
 
       <a-form-item v-if="isVmessOrVless">
@@ -277,7 +277,7 @@ const title = computed(() =>
           ID
           <SyncOutlined class="random-icon" @click="randomId" />
         </template>
-        <a-input v-model:value="client.id" />
+        <x-input v-model:value="client.id" />
       </a-form-item>
 
       <a-form-item v-if="protocol === Protocols.VMESS" :label="t('security')">
@@ -293,24 +293,24 @@ const title = computed(() =>
           {{ t('subscription.title') }}
           <SyncOutlined class="random-icon" @click="randomSubId" />
         </template>
-        <a-input v-model:value="client.subId" />
+        <x-input v-model:value="client.subId" />
       </a-form-item>
 
       <a-form-item v-if="client.email && tgBotEnable" label="Telegram ID">
-        <a-input-number v-model:value="client.tgId" :min="0" :style="{ width: '50%' }" />
+        <x-input type="number" v-model:value="client.tgId" :min="0" :style="{ width: '50%' }" />
       </a-form-item>
 
       <a-form-item v-if="client.email" :label="t('comment')">
-        <a-input v-model:value="client.comment" />
+        <x-input v-model:value="client.comment" />
       </a-form-item>
 
       <a-form-item v-if="ipLimitEnable" :label="t('pages.inbounds.IPLimit')">
-        <a-input-number v-model:value="client.limitIp" :min="0" />
+        <x-input type="number" v-model:value="client.limitIp" :min="0" />
       </a-form-item>
 
       <a-form-item v-if="ipLimitEnable && client.limitIp > 0 && client.email && mode === 'edit'"
         :label="t('pages.inbounds.IPLimitlog')">
-        <a-textarea v-model:value="clientIpsText" readonly :placeholder="t('pages.inbounds.IPLimitlogDesc')"
+        <x-input type="textarea" v-model:value="clientIpsText" readonly :placeholder="t('pages.inbounds.IPLimitlogDesc')"
           :auto-size="{ minRows: 3, maxRows: 8 }" @click="loadClientIps" />
         <a-button type="link" size="small" danger @click="clearClientIps">
           <template #icon>
@@ -330,14 +330,14 @@ const title = computed(() =>
       </a-form-item>
 
       <a-form-item v-if="protocol === Protocols.VLESS" label="Reverse tag">
-        <a-input v-model:value="client.reverseTag" placeholder="Optional reverse tag" />
+        <x-input v-model:value="client.reverseTag" placeholder="Optional reverse tag" />
       </a-form-item>
 
       <a-form-item>
         <template #label>
           <a-tooltip :title="t('pages.inbounds.meansNoLimit')">{{ t('pages.inbounds.totalFlow') }}</a-tooltip>
         </template>
-        <a-input-number v-model:value="totalGB" :min="0" :step="0.1" />
+        <x-input type="number" v-model:value="totalGB" :min="0" :step="0.1" />
       </a-form-item>
 
       <a-form-item v-if="mode === 'edit' && clientStats" :label="t('usage')">
@@ -356,7 +356,7 @@ const title = computed(() =>
       </a-form-item>
 
       <a-form-item v-if="delayedStart" :label="t('pages.client.expireDays')">
-        <a-input-number v-model:value="delayedExpireDays" :min="0" />
+        <x-input type="number" v-model:value="delayedExpireDays" :min="0" />
       </a-form-item>
 
       <a-form-item v-else>
@@ -372,7 +372,7 @@ const title = computed(() =>
         <template #label>
           <a-tooltip :title="t('pages.client.renewDesc')">{{ t('pages.client.renew') }}</a-tooltip>
         </template>
-        <a-input-number v-model:value="client.reset" :min="0" />
+        <x-input type="number" v-model:value="client.reset" :min="0" />
       </a-form-item>
     </a-form>
   </a-modal>

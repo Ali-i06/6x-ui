@@ -218,28 +218,28 @@ function toggleTwoFactor() {
       <SettingListItem paddings="small">
         <template #title>{{ t('pages.settings.oldUsername') }}</template>
         <template #control>
-          <a-input v-model:value="user.oldUsername" autocomplete="username" />
+          <x-input v-model:value="user.oldUsername" autocomplete="username" />
         </template>
       </SettingListItem>
 
       <SettingListItem paddings="small">
         <template #title>{{ t('pages.settings.currentPassword') }}</template>
         <template #control>
-          <a-input-password v-model:value="user.oldPassword" autocomplete="current-password" />
+          <x-input type="password" v-model:value="user.oldPassword" autocomplete="current-password" />
         </template>
       </SettingListItem>
 
       <SettingListItem paddings="small">
         <template #title>{{ t('pages.settings.newUsername') }}</template>
         <template #control>
-          <a-input v-model:value="user.newUsername" />
+          <x-input v-model:value="user.newUsername" />
         </template>
       </SettingListItem>
 
       <SettingListItem paddings="small">
         <template #title>{{ t('pages.settings.newPassword') }}</template>
         <template #control>
-          <a-input-password v-model:value="user.newPassword" autocomplete="new-password" />
+          <x-input type="password" v-model:value="user.newPassword" autocomplete="new-password" />
         </template>
       </SettingListItem>
 
@@ -305,7 +305,7 @@ function toggleTwoFactor() {
     :confirm-loading="creating" :ok-text="t('confirm')" :cancel-text="t('cancel')" @ok="confirmCreateToken">
     <a-form layout="vertical">
       <a-form-item :label="t('pages.settings.security.apiTokenName') || 'Name'" required>
-        <a-input v-model:value="createName" maxlength="64"
+        <x-input v-model:value="createName" maxlength="64"
           :placeholder="t('pages.settings.security.apiTokenNamePlaceholder') || 'e.g. central-panel-a'"
           @keyup.enter="confirmCreateToken" />
       </a-form-item>

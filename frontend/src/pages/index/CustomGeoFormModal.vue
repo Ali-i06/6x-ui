@@ -95,11 +95,11 @@ async function submit() {
         </a-select>
       </a-form-item>
       <a-form-item :label="t('pages.index.customGeoAlias')">
-        <a-input v-model:value="form.alias" :disabled="editing"
+        <x-input v-model:value="form.alias" :disabled="editing"
           :placeholder="t('pages.index.customGeoAliasPlaceholder')" />
       </a-form-item>
       <a-form-item :label="t('pages.index.customGeoUrl')">
-        <a-input v-model:value="form.url" placeholder="https://" />
+        <x-input v-model:value="form.url" placeholder="https://" />
       </a-form-item>
     </a-form>
   </a-modal>

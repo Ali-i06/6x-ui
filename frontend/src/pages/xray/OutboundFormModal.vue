@@ -251,12 +251,12 @@ function regenerateWgKeys() {
 
           <!-- Tag -->
           <a-form-item label="Tag" :validate-status="tagValidateStatus" :help="tagHelp" has-feedback>
-            <a-input v-model:value="outbound.tag" placeholder="unique-tag" />
+            <x-input v-model:value="outbound.tag" placeholder="unique-tag" />
           </a-form-item>
 
           <!-- Send through -->
           <a-form-item label="Send through">
-            <a-input v-model:value="outbound.sendThrough" placeholder="local IP" />
+            <x-input v-model:value="outbound.sendThrough" placeholder="local IP" />
           </a-form-item>
 
           <!-- ============== Freedom ============== -->
@@ -267,7 +267,7 @@ function regenerateWgKeys() {
               </a-select>
             </a-form-item>
             <a-form-item label="Redirect">
-              <a-input v-model:value="outbound.settings.redirect" />
+              <x-input v-model:value="outbound.settings.redirect" />
             </a-form-item>
 
             <a-form-item label="Fragment">
@@ -281,13 +281,13 @@ function regenerateWgKeys() {
                 </a-select>
               </a-form-item>
               <a-form-item label="Length">
-                <a-input v-model:value="outbound.settings.fragment.length" placeholder="100-200" />
+                <x-input v-model:value="outbound.settings.fragment.length" placeholder="100-200" />
               </a-form-item>
               <a-form-item label="Interval">
-                <a-input v-model:value="outbound.settings.fragment.interval" placeholder="10-20" />
+                <x-input v-model:value="outbound.settings.fragment.interval" placeholder="10-20" />
               </a-form-item>
               <a-form-item label="Max Split">
-                <a-input v-model:value="outbound.settings.fragment.maxSplit" placeholder="300-400" />
+                <x-input v-model:value="outbound.settings.fragment.maxSplit" placeholder="300-400" />
               </a-form-item>
             </template>
 
@@ -317,10 +317,10 @@ function regenerateWgKeys() {
                 </a-select>
               </a-form-item>
               <a-form-item label="Packet">
-                <a-input v-model:value="noise.packet" />
+                <x-input v-model:value="noise.packet" />
               </a-form-item>
               <a-form-item label="Delay (ms)">
-                <a-input v-model:value="noise.delay" />
+                <x-input v-model:value="noise.delay" />
               </a-form-item>
               <a-form-item label="Apply to">
                 <a-select v-model:value="noise.applyTo">
@@ -343,7 +343,7 @@ function regenerateWgKeys() {
           <!-- ============== Loopback ============== -->
           <template v-if="isLoopback">
             <a-form-item label="Inbound tag">
-              <a-input v-model:value="outbound.settings.inboundTag"
+              <x-input v-model:value="outbound.settings.inboundTag"
                 placeholder="inbound tag using in routing rules" />
             </a-form-item>
           </template>
@@ -356,14 +356,14 @@ function regenerateWgKeys() {
               </a-select>
             </a-form-item>
             <a-form-item label="Rewrite address">
-              <a-input v-model:value="outbound.settings.rewriteAddress" placeholder="(unchanged) e.g. 1.1.1.1" />
+              <x-input v-model:value="outbound.settings.rewriteAddress" placeholder="(unchanged) e.g. 1.1.1.1" />
             </a-form-item>
             <a-form-item label="Rewrite port">
-              <a-input-number v-model:value="outbound.settings.rewritePort" :min="0" :max="65535"
+              <x-input type="number" v-model:value="outbound.settings.rewritePort" :min="0" :max="65535"
                 :style="{ width: '100%' }" placeholder="(unchanged)" />
             </a-form-item>
             <a-form-item label="User level">
-              <a-input-number v-model:value="outbound.settings.userLevel" :min="0" :style="{ width: '100%' }" />
+              <x-input type="number" v-model:value="outbound.settings.userLevel" :min="0" :style="{ width: '100%' }" />
             </a-form-item>
             <a-form-item label="Rules">
               <a-button size="small" type="primary" @click="outbound.settings.rules.push(new Outbound.DNSRule())">
@@ -385,10 +385,10 @@ function regenerateWgKeys() {
                 </a-select>
               </a-form-item>
               <a-form-item label="QType">
-                <a-input v-model:value="rule.qtype" placeholder="1,3,23-24" />
+                <x-input v-model:value="rule.qtype" placeholder="1,3,23-24" />
               </a-form-item>
               <a-form-item :label="t('domainName')">
-                <a-input v-model:value="rule.domain" placeholder="domain:example.com" />
+                <x-input v-model:value="rule.domain" placeholder="domain:example.com" />
               </a-form-item>
             </template>
           </template>
@@ -396,17 +396,17 @@ function regenerateWgKeys() {
           <!-- ============== WireGuard ============== -->
           <template v-if="isWireguard">
             <a-form-item :label="t('pages.inbounds.address')">
-              <a-input v-model:value="outbound.settings.address" />
+              <x-input v-model:value="outbound.settings.address" />
             </a-form-item>
             <a-form-item>
               <template #label>
                 {{ t('pages.inbounds.privatekey') }}
                 <SyncOutlined class="random-icon" @click="regenerateWgKeys" />
               </template>
-              <a-input v-model:value="outbound.settings.secretKey" />
+              <x-input v-model:value="outbound.settings.secretKey" />
             </a-form-item>
             <a-form-item :label="t('pages.inbounds.publicKey')">
-              <a-input :value="outbound.settings.pubKey" disabled />
+              <x-input :value="outbound.settings.pubKey" disabled />
             </a-form-item>
             <a-form-item label="Domain strategy">
               <a-select v-model:value="outbound.settings.domainStrategy">
@@ -416,16 +416,16 @@ function regenerateWgKeys() {
               </a-select>
             </a-form-item>
             <a-form-item label="MTU">
-              <a-input-number v-model:value="outbound.settings.mtu" :min="0" />
+              <x-input type="number" v-model:value="outbound.settings.mtu" :min="0" />
             </a-form-item>
             <a-form-item label="Workers">
-              <a-input-number v-model:value="outbound.settings.workers" :min="0" />
+              <x-input type="number" v-model:value="outbound.settings.workers" :min="0" />
             </a-form-item>
             <a-form-item label="No-kernel TUN">
               <a-switch v-model:checked="outbound.settings.noKernelTun" />
             </a-form-item>
             <a-form-item label="Reserved">
-              <a-input v-model:value="outbound.settings.reserved" />
+              <x-input v-model:value="outbound.settings.reserved" />
             </a-form-item>
             <a-form-item label="Peers">
               <a-button size="small" type="primary"
@@ -444,21 +444,21 @@ function regenerateWgKeys() {
                 </div>
               </a-form-item>
               <a-form-item label="Endpoint">
-                <a-input v-model:value="peer.endpoint" />
+                <x-input v-model:value="peer.endpoint" />
               </a-form-item>
               <a-form-item :label="t('pages.inbounds.publicKey')">
-                <a-input v-model:value="peer.publicKey" />
+                <x-input v-model:value="peer.publicKey" />
               </a-form-item>
               <a-form-item label="PSK">
-                <a-input v-model:value="peer.psk" />
+                <x-input v-model:value="peer.psk" />
               </a-form-item>
               <a-form-item label="Allowed IPs">
                 <template v-for="(_, idx) in peer.allowedIPs" :key="idx">
-                  <a-input v-model:value="peer.allowedIPs[idx]" :style="{ marginBottom: '4px' }">
+                  <x-input v-model:value="peer.allowedIPs[idx]" :style="{ marginBottom: '4px' }">
                     <template v-if="peer.allowedIPs.length > 1" #addonAfter>
                       <MinusOutlined @click="peer.allowedIPs.splice(idx, 1)" />
                     </template>
-                  </a-input>
+                  </x-input>
                 </template>
                 <a-button size="small" @click="peer.allowedIPs.push('')">
                   <template #icon>
@@ -467,7 +467,7 @@ function regenerateWgKeys() {
                 </a-button>
               </a-form-item>
               <a-form-item label="Keep alive">
-                <a-input-number v-model:value="peer.keepAlive" :min="0" />
+                <x-input type="number" v-model:value="peer.keepAlive" :min="0" />
               </a-form-item>
             </template>
           </template>
@@ -475,17 +475,17 @@ function regenerateWgKeys() {
           <!-- ============== Address + Port (most protocols) ============== -->
           <template v-if="outbound.hasAddressPort()">
             <a-form-item :label="t('pages.inbounds.address')">
-              <a-input v-model:value="outbound.settings.address" />
+              <x-input v-model:value="outbound.settings.address" />
             </a-form-item>
             <a-form-item :label="t('pages.inbounds.port')">
-              <a-input-number v-model:value="outbound.settings.port" :min="1" :max="65535" />
+              <x-input type="number" v-model:value="outbound.settings.port" :min="1" :max="65535" />
             </a-form-item>
           </template>
 
           <!-- ============== VMess / VLess user ============== -->
           <template v-if="isVMessOrVLess">
             <a-form-item label="ID">
-              <a-input v-model:value="outbound.settings.id" />
+              <x-input v-model:value="outbound.settings.id" />
             </a-form-item>
             <a-form-item v-if="isVMess" :label="t('security')">
               <a-select v-model:value="outbound.settings.security">
@@ -493,10 +493,10 @@ function regenerateWgKeys() {
               </a-select>
             </a-form-item>
             <a-form-item v-if="isVLESS" :label="t('encryption')">
-              <a-input v-model:value="outbound.settings.encryption" />
+              <x-input v-model:value="outbound.settings.encryption" />
             </a-form-item>
             <a-form-item v-if="isVLESS" label="Reverse tag">
-              <a-input v-model:value="outbound.settings.reverseTag" placeholder="optional" />
+              <x-input v-model:value="outbound.settings.reverseTag" placeholder="optional" />
             </a-form-item>
 
             <!-- Reverse-Sniffing — surfaced only when a reverse tag is set,
@@ -544,7 +544,7 @@ function regenerateWgKeys() {
           <!-- ============== Trojan / Shadowsocks ============== -->
           <template v-if="isTrojan || isShadowsocks">
             <a-form-item :label="t('password')">
-              <a-input v-model:value="outbound.settings.password" />
+              <x-input v-model:value="outbound.settings.password" />
             </a-form-item>
           </template>
           <template v-if="isShadowsocks">
@@ -557,24 +557,24 @@ function regenerateWgKeys() {
               <a-switch v-model:checked="outbound.settings.uot" />
             </a-form-item>
             <a-form-item label="UoT version">
-              <a-input-number v-model:value="outbound.settings.UoTVersion" :min="1" :max="2" />
+              <x-input type="number" v-model:value="outbound.settings.UoTVersion" :min="1" :max="2" />
             </a-form-item>
           </template>
 
           <!-- ============== SOCKS / HTTP ============== -->
           <template v-if="outbound.hasUsername()">
             <a-form-item :label="t('username')">
-              <a-input v-model:value="outbound.settings.user" />
+              <x-input v-model:value="outbound.settings.user" />
             </a-form-item>
             <a-form-item :label="t('password')">
-              <a-input v-model:value="outbound.settings.pass" />
+              <x-input v-model:value="outbound.settings.pass" />
             </a-form-item>
           </template>
 
           <!-- ============== Hysteria ============== -->
           <template v-if="isHysteria">
             <a-form-item label="Version">
-              <a-input-number :value="outbound.settings.version || 2" :min="2" :max="2" disabled />
+              <x-input type="number" :value="outbound.settings.version || 2" :min="2" :max="2" disabled />
             </a-form-item>
           </template>
 
@@ -597,10 +597,10 @@ function regenerateWgKeys() {
               </a-form-item>
               <template v-if="outbound.stream.tcp.type === 'http'">
                 <a-form-item :label="t('host')">
-                  <a-input v-model:value="outbound.stream.tcp.host" />
+                  <x-input v-model:value="outbound.stream.tcp.host" />
                 </a-form-item>
                 <a-form-item :label="t('path')">
-                  <a-input v-model:value="outbound.stream.tcp.path" />
+                  <x-input v-model:value="outbound.stream.tcp.path" />
                 </a-form-item>
               </template>
             </template>
@@ -608,45 +608,45 @@ function regenerateWgKeys() {
             <!-- KCP -->
             <template v-if="outbound.stream.network === 'kcp'">
               <a-form-item label="MTU">
-                <a-input-number v-model:value="outbound.stream.kcp.mtu" :min="0" />
+                <x-input type="number" v-model:value="outbound.stream.kcp.mtu" :min="0" />
               </a-form-item>
               <a-form-item label="TTI (ms)">
-                <a-input-number v-model:value="outbound.stream.kcp.tti" :min="0" />
+                <x-input type="number" v-model:value="outbound.stream.kcp.tti" :min="0" />
               </a-form-item>
               <a-form-item label="Uplink (MB/s)">
-                <a-input-number v-model:value="outbound.stream.kcp.upCap" :min="0" />
+                <x-input type="number" v-model:value="outbound.stream.kcp.upCap" :min="0" />
               </a-form-item>
               <a-form-item label="Downlink (MB/s)">
-                <a-input-number v-model:value="outbound.stream.kcp.downCap" :min="0" />
+                <x-input type="number" v-model:value="outbound.stream.kcp.downCap" :min="0" />
               </a-form-item>
               <a-form-item label="CWND multiplier">
-                <a-input-number v-model:value="outbound.stream.kcp.cwndMultiplier" :min="1" />
+                <x-input type="number" v-model:value="outbound.stream.kcp.cwndMultiplier" :min="1" />
               </a-form-item>
               <a-form-item label="Max sending window">
-                <a-input-number v-model:value="outbound.stream.kcp.maxSendingWindow" :min="0" />
+                <x-input type="number" v-model:value="outbound.stream.kcp.maxSendingWindow" :min="0" />
               </a-form-item>
             </template>
 
             <!-- WebSocket -->
             <template v-if="outbound.stream.network === 'ws'">
               <a-form-item :label="t('host')">
-                <a-input v-model:value="outbound.stream.ws.host" />
+                <x-input v-model:value="outbound.stream.ws.host" />
               </a-form-item>
               <a-form-item :label="t('path')">
-                <a-input v-model:value="outbound.stream.ws.path" />
+                <x-input v-model:value="outbound.stream.ws.path" />
               </a-form-item>
               <a-form-item label="Heartbeat (s)">
-                <a-input-number v-model:value="outbound.stream.ws.heartbeatPeriod" :min="0" />
+                <x-input type="number" v-model:value="outbound.stream.ws.heartbeatPeriod" :min="0" />
               </a-form-item>
             </template>
 
             <!-- gRPC -->
             <template v-if="outbound.stream.network === 'grpc'">
               <a-form-item label="Service name">
-                <a-input v-model:value="outbound.stream.grpc.serviceName" />
+                <x-input v-model:value="outbound.stream.grpc.serviceName" />
               </a-form-item>
               <a-form-item label="Authority">
-                <a-input v-model:value="outbound.stream.grpc.authority" />
+                <x-input v-model:value="outbound.stream.grpc.authority" />
               </a-form-item>
               <a-form-item label="Multi mode">
                 <a-switch v-model:checked="outbound.stream.grpc.multiMode" />
@@ -656,10 +656,10 @@ function regenerateWgKeys() {
             <!-- HTTPUpgrade -->
             <template v-if="outbound.stream.network === 'httpupgrade'">
               <a-form-item :label="t('host')">
-                <a-input v-model:value="outbound.stream.httpupgrade.host" />
+                <x-input v-model:value="outbound.stream.httpupgrade.host" />
               </a-form-item>
               <a-form-item :label="t('path')">
-                <a-input v-model:value="outbound.stream.httpupgrade.path" />
+                <x-input v-model:value="outbound.stream.httpupgrade.path" />
               </a-form-item>
             </template>
 
@@ -667,10 +667,10 @@ function regenerateWgKeys() {
                  already carries every field below; we just surface them. -->
             <template v-if="outbound.stream.network === 'xhttp'">
               <a-form-item :label="t('host')">
-                <a-input v-model:value="outbound.stream.xhttp.host" />
+                <x-input v-model:value="outbound.stream.xhttp.host" />
               </a-form-item>
               <a-form-item :label="t('path')">
-                <a-input v-model:value="outbound.stream.xhttp.path" />
+                <x-input v-model:value="outbound.stream.xhttp.path" />
               </a-form-item>
 
               <a-form-item :label="t('pages.inbounds.stream.tcp.requestHeader')">
@@ -682,10 +682,10 @@ function regenerateWgKeys() {
               </a-form-item>
               <a-form-item :wrapper-col="{ span: 24 }">
                 <a-input-group v-for="(header, idx) in outbound.stream.xhttp.headers" :key="idx" compact class="mb-8">
-                  <a-input v-model:value="header.name" :style="{ width: '45%' }" placeholder="Name">
+                  <x-input v-model:value="header.name" :style="{ width: '45%' }" placeholder="Name">
                     <template #addonBefore>{{ idx + 1 }}</template>
-                  </a-input>
-                  <a-input v-model:value="header.value" :style="{ width: '45%' }" placeholder="Value" />
+                  </x-input>
+                  <x-input v-model:value="header.value" :style="{ width: '45%' }" placeholder="Value" />
                   <a-button @click="outbound.stream.xhttp.removeHeader(idx)">
                     <template #icon>
                       <MinusOutlined />
@@ -700,24 +700,24 @@ function regenerateWgKeys() {
                 </a-select>
               </a-form-item>
               <a-form-item v-if="outbound.stream.xhttp.mode === 'packet-up'" label="Max Upload Size (Byte)">
-                <a-input v-model:value="outbound.stream.xhttp.scMaxEachPostBytes" />
+                <x-input v-model:value="outbound.stream.xhttp.scMaxEachPostBytes" />
               </a-form-item>
               <a-form-item v-if="outbound.stream.xhttp.mode === 'packet-up'" label="Min Upload Interval (Ms)">
-                <a-input v-model:value="outbound.stream.xhttp.scMinPostsIntervalMs" />
+                <x-input v-model:value="outbound.stream.xhttp.scMinPostsIntervalMs" />
               </a-form-item>
 
               <a-form-item label="Padding Bytes">
-                <a-input v-model:value="outbound.stream.xhttp.xPaddingBytes" />
+                <x-input v-model:value="outbound.stream.xhttp.xPaddingBytes" />
               </a-form-item>
               <a-form-item label="Padding Obfs Mode">
                 <a-switch v-model:checked="outbound.stream.xhttp.xPaddingObfsMode" />
               </a-form-item>
               <template v-if="outbound.stream.xhttp.xPaddingObfsMode">
                 <a-form-item label="Padding Key">
-                  <a-input v-model:value="outbound.stream.xhttp.xPaddingKey" placeholder="x_padding" />
+                  <x-input v-model:value="outbound.stream.xhttp.xPaddingKey" placeholder="x_padding" />
                 </a-form-item>
                 <a-form-item label="Padding Header">
-                  <a-input v-model:value="outbound.stream.xhttp.xPaddingHeader" placeholder="X-Padding" />
+                  <x-input v-model:value="outbound.stream.xhttp.xPaddingHeader" placeholder="X-Padding" />
                 </a-form-item>
                 <a-form-item label="Padding Placement">
                   <a-select v-model:value="outbound.stream.xhttp.xPaddingPlacement">
@@ -759,7 +759,7 @@ function regenerateWgKeys() {
               <a-form-item
                 v-if="outbound.stream.xhttp.sessionPlacement && outbound.stream.xhttp.sessionPlacement !== 'path'"
                 label="Session Key">
-                <a-input v-model:value="outbound.stream.xhttp.sessionKey" placeholder="x_session" />
+                <x-input v-model:value="outbound.stream.xhttp.sessionKey" placeholder="x_session" />
               </a-form-item>
 
               <a-form-item label="Sequence Placement">
@@ -773,7 +773,7 @@ function regenerateWgKeys() {
               </a-form-item>
               <a-form-item v-if="outbound.stream.xhttp.seqPlacement && outbound.stream.xhttp.seqPlacement !== 'path'"
                 label="Sequence Key">
-                <a-input v-model:value="outbound.stream.xhttp.seqKey" placeholder="x_seq" />
+                <x-input v-model:value="outbound.stream.xhttp.seqKey" placeholder="x_seq" />
               </a-form-item>
 
               <a-form-item v-if="outbound.stream.xhttp.mode === 'packet-up'" label="Uplink Data Placement">
@@ -788,12 +788,12 @@ function regenerateWgKeys() {
               <a-form-item v-if="outbound.stream.xhttp.mode === 'packet-up'
                 && outbound.stream.xhttp.uplinkDataPlacement
                 && outbound.stream.xhttp.uplinkDataPlacement !== 'body'" label="Uplink Data Key">
-                <a-input v-model:value="outbound.stream.xhttp.uplinkDataKey" placeholder="x_data" />
+                <x-input v-model:value="outbound.stream.xhttp.uplinkDataKey" placeholder="x_data" />
               </a-form-item>
               <a-form-item v-if="outbound.stream.xhttp.mode === 'packet-up'
                 && outbound.stream.xhttp.uplinkDataPlacement
                 && outbound.stream.xhttp.uplinkDataPlacement !== 'body'" label="Uplink Chunk Size">
-                <a-input-number v-model:value="outbound.stream.xhttp.uplinkChunkSize" :min="0"
+                <x-input type="number" v-model:value="outbound.stream.xhttp.uplinkChunkSize" :min="0"
                   placeholder="0 (unlimited)" />
               </a-form-item>
 
@@ -808,22 +808,22 @@ function regenerateWgKeys() {
               </a-form-item>
               <template v-if="outbound.stream.xhttp.enableXmux">
                 <a-form-item v-if="!outbound.stream.xhttp.xmux.maxConnections" label="Max Concurrency">
-                  <a-input v-model:value="outbound.stream.xhttp.xmux.maxConcurrency" />
+                  <x-input v-model:value="outbound.stream.xhttp.xmux.maxConcurrency" />
                 </a-form-item>
                 <a-form-item v-if="!outbound.stream.xhttp.xmux.maxConcurrency" label="Max Connections">
-                  <a-input v-model:value="outbound.stream.xhttp.xmux.maxConnections" />
+                  <x-input v-model:value="outbound.stream.xhttp.xmux.maxConnections" />
                 </a-form-item>
                 <a-form-item label="Max Reuse Times">
-                  <a-input v-model:value="outbound.stream.xhttp.xmux.cMaxReuseTimes" />
+                  <x-input v-model:value="outbound.stream.xhttp.xmux.cMaxReuseTimes" />
                 </a-form-item>
                 <a-form-item label="Max Request Times">
-                  <a-input v-model:value="outbound.stream.xhttp.xmux.hMaxRequestTimes" />
+                  <x-input v-model:value="outbound.stream.xhttp.xmux.hMaxRequestTimes" />
                 </a-form-item>
                 <a-form-item label="Max Reusable Secs">
-                  <a-input v-model:value="outbound.stream.xhttp.xmux.hMaxReusableSecs" />
+                  <x-input v-model:value="outbound.stream.xhttp.xmux.hMaxReusableSecs" />
                 </a-form-item>
                 <a-form-item label="Keep Alive Period">
-                  <a-input-number v-model:value="outbound.stream.xhttp.xmux.hKeepAlivePeriod" :min="0" />
+                  <x-input type="number" v-model:value="outbound.stream.xhttp.xmux.hKeepAlivePeriod" :min="0" />
                 </a-form-item>
               </template>
             </template>
@@ -831,7 +831,7 @@ function regenerateWgKeys() {
             <!-- Hysteria transport -->
             <template v-if="outbound.stream.network === 'hysteria'">
               <a-form-item label="Auth password">
-                <a-input v-model:value="outbound.stream.hysteria.auth" />
+                <x-input v-model:value="outbound.stream.hysteria.auth" />
               </a-form-item>
               <a-form-item label="Congestion">
                 <a-select v-model:value="outbound.stream.hysteria.congestion">
@@ -840,19 +840,19 @@ function regenerateWgKeys() {
                 </a-select>
               </a-form-item>
               <a-form-item label="Upload">
-                <a-input v-model:value="outbound.stream.hysteria.up" placeholder="100 mbps" />
+                <x-input v-model:value="outbound.stream.hysteria.up" placeholder="100 mbps" />
               </a-form-item>
               <a-form-item label="Download">
-                <a-input v-model:value="outbound.stream.hysteria.down" placeholder="100 mbps" />
+                <x-input v-model:value="outbound.stream.hysteria.down" placeholder="100 mbps" />
               </a-form-item>
               <a-form-item label="UDP hop port">
-                <a-input v-model:value="outbound.stream.hysteria.udphopPort" placeholder="1145-1919" />
+                <x-input v-model:value="outbound.stream.hysteria.udphopPort" placeholder="1145-1919" />
               </a-form-item>
               <a-form-item label="Max idle (s)">
-                <a-input-number v-model:value="outbound.stream.hysteria.maxIdleTimeout" :min="4" :max="120" />
+                <x-input type="number" v-model:value="outbound.stream.hysteria.maxIdleTimeout" :min="4" :max="120" />
               </a-form-item>
               <a-form-item label="Keep alive (s)">
-                <a-input-number v-model:value="outbound.stream.hysteria.keepAlivePeriod" :min="2" :max="60" />
+                <x-input type="number" v-model:value="outbound.stream.hysteria.keepAlivePeriod" :min="2" :max="60" />
               </a-form-item>
               <a-form-item label="Disable Path MTU">
                 <a-switch v-model:checked="outbound.stream.hysteria.disablePathMTUDiscovery" />
@@ -872,7 +872,7 @@ function regenerateWgKeys() {
 
             <template v-if="outbound.stream.isTls">
               <a-form-item label="SNI">
-                <a-input v-model:value="outbound.stream.tls.serverName" placeholder="server name" />
+                <x-input v-model:value="outbound.stream.tls.serverName" placeholder="server name" />
               </a-form-item>
               <a-form-item label="uTLS">
                 <a-select v-model:value="outbound.stream.tls.fingerprint">
@@ -886,19 +886,19 @@ function regenerateWgKeys() {
                 </a-select>
               </a-form-item>
               <a-form-item label="ECH">
-                <a-input v-model:value="outbound.stream.tls.echConfigList" />
+                <x-input v-model:value="outbound.stream.tls.echConfigList" />
               </a-form-item>
               <a-form-item label="Verify peer name">
-                <a-input v-model:value="outbound.stream.tls.verifyPeerCertByName" placeholder="cloudflare-dns.com" />
+                <x-input v-model:value="outbound.stream.tls.verifyPeerCertByName" placeholder="cloudflare-dns.com" />
               </a-form-item>
               <a-form-item label="Pinned SHA256">
-                <a-input v-model:value="outbound.stream.tls.pinnedPeerCertSha256" placeholder="base64 SHA256" />
+                <x-input v-model:value="outbound.stream.tls.pinnedPeerCertSha256" placeholder="base64 SHA256" />
               </a-form-item>
             </template>
 
             <template v-if="outbound.stream.isReality">
               <a-form-item label="SNI">
-                <a-input v-model:value="outbound.stream.reality.serverName" />
+                <x-input v-model:value="outbound.stream.reality.serverName" />
               </a-form-item>
               <a-form-item label="uTLS">
                 <a-select v-model:value="outbound.stream.reality.fingerprint">
@@ -906,16 +906,16 @@ function regenerateWgKeys() {
                 </a-select>
               </a-form-item>
               <a-form-item label="Short ID">
-                <a-input v-model:value="outbound.stream.reality.shortId" />
+                <x-input v-model:value="outbound.stream.reality.shortId" />
               </a-form-item>
               <a-form-item label="SpiderX">
-                <a-input v-model:value="outbound.stream.reality.spiderX" />
+                <x-input v-model:value="outbound.stream.reality.spiderX" />
               </a-form-item>
               <a-form-item :label="t('pages.inbounds.publicKey')">
-                <a-textarea v-model:value="outbound.stream.reality.publicKey" :auto-size="{ minRows: 2 }" />
+                <x-input type="textarea" v-model:value="outbound.stream.reality.publicKey" :auto-size="{ minRows: 2 }" />
               </a-form-item>
               <a-form-item label="mldsa65 verify">
-                <a-textarea v-model:value="outbound.stream.reality.mldsa65Verify" :auto-size="{ minRows: 2 }" />
+                <x-input type="textarea" v-model:value="outbound.stream.reality.mldsa65Verify" :auto-size="{ minRows: 2 }" />
               </a-form-item>
             </template>
           </template>
@@ -927,7 +927,7 @@ function regenerateWgKeys() {
             </a-form-item>
             <template v-if="outbound.stream.sockoptSwitch">
               <a-form-item label="Dialer proxy">
-                <a-input v-model:value="outbound.stream.sockopt.dialerProxy" />
+                <x-input v-model:value="outbound.stream.sockopt.dialerProxy" />
               </a-form-item>
               <a-form-item label="Address+Port strategy">
                 <a-select v-model:value="outbound.stream.sockopt.addressPortStrategy">
@@ -937,7 +937,7 @@ function regenerateWgKeys() {
                 </a-select>
               </a-form-item>
               <a-form-item label="Keep alive interval">
-                <a-input-number v-model:value="outbound.stream.sockopt.tcpKeepAliveInterval" :min="0" />
+                <x-input type="number" v-model:value="outbound.stream.sockopt.tcpKeepAliveInterval" :min="0" />
               </a-form-item>
               <a-form-item label="TCP Fast Open">
                 <a-switch v-model:checked="outbound.stream.sockopt.tcpFastOpen" />
@@ -958,10 +958,10 @@ function regenerateWgKeys() {
             </a-form-item>
             <template v-if="outbound.mux.enabled">
               <a-form-item label="Concurrency">
-                <a-input-number v-model:value="outbound.mux.concurrency" :min="-1" :max="1024" />
+                <x-input type="number" v-model:value="outbound.mux.concurrency" :min="-1" :max="1024" />
               </a-form-item>
               <a-form-item label="xudp concurrency">
-                <a-input-number v-model:value="outbound.mux.xudpConcurrency" :min="-1" :max="1024" />
+                <x-input type="number" v-model:value="outbound.mux.xudpConcurrency" :min="-1" :max="1024" />
               </a-form-item>
               <a-form-item label="xudp UDP 443">
                 <a-select v-model:value="outbound.mux.xudpProxyUDP443">

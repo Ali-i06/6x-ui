@@ -119,12 +119,12 @@ async function onSave() {
       <a-row :gutter="16">
         <a-col :span="12">
           <a-form-item :label="t('pages.nodes.name')" required>
-            <a-input v-model:value="form.name" :placeholder="t('pages.nodes.namePlaceholder')" />
+            <x-input v-model:value="form.name" :placeholder="t('pages.nodes.namePlaceholder')" />
           </a-form-item>
         </a-col>
         <a-col :span="12">
           <a-form-item :label="t('pages.nodes.remark')">
-            <a-input v-model:value="form.remark" />
+            <x-input v-model:value="form.remark" />
           </a-form-item>
         </a-col>
       </a-row>
@@ -140,12 +140,12 @@ async function onSave() {
         </a-col>
         <a-col :span="12">
           <a-form-item :label="t('pages.nodes.address')" required>
-            <a-input v-model:value="form.address" :placeholder="t('pages.nodes.addressPlaceholder')" />
+            <x-input v-model:value="form.address" :placeholder="t('pages.nodes.addressPlaceholder')" />
           </a-form-item>
         </a-col>
         <a-col :span="6">
           <a-form-item :label="t('pages.nodes.port')" required>
-            <a-input-number v-model:value="form.port" :min="1" :max="65535" style="width: 100%" />
+            <x-input type="number" v-model:value="form.port" :min="1" :max="65535" style="width: 100%" />
           </a-form-item>
         </a-col>
       </a-row>
@@ -153,7 +153,7 @@ async function onSave() {
       <a-row :gutter="16">
         <a-col :span="12">
           <a-form-item :label="t('pages.nodes.basePath')">
-            <a-input v-model:value="form.basePath" placeholder="/" />
+            <x-input v-model:value="form.basePath" placeholder="/" />
           </a-form-item>
         </a-col>
         <a-col :span="12">
@@ -169,7 +169,7 @@ async function onSave() {
       </a-form-item>
 
       <a-form-item :label="t('pages.nodes.apiToken')" required>
-        <a-input-password v-model:value="form.apiToken" :placeholder="t('pages.nodes.apiTokenPlaceholder')" />
+        <x-input type="password" v-model:value="form.apiToken" :placeholder="t('pages.nodes.apiTokenPlaceholder')" />
         <div class="hint">{{ t('pages.nodes.apiTokenHint') }}</div>
       </a-form-item>
 

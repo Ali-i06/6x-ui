@@ -87,12 +87,12 @@ async function copyToken() {
       </div>
       <a-divider />
       <p>{{ t('pages.settings.security.twoFactorModalSecondStep') }}</p>
-      <a-input v-model:value="enteredCode" :style="{ width: '100%' }" />
+      <x-input v-model:value="enteredCode" :style="{ width: '100%' }" />
     </template>
 
     <template v-else>
       <p>{{ description }}</p>
-      <a-input v-model:value="enteredCode" :style="{ width: '100%' }" />
+      <x-input v-model:value="enteredCode" :style="{ width: '100%' }" />
     </template>
 
     <template #footer>

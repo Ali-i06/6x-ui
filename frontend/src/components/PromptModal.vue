@@ -45,8 +45,8 @@ function onKeydown(e) {
 <template>
   <a-modal :open="open" :title="title" :ok-text="okText" cancel-text="Cancel" :mask-closable="false"
     :confirm-loading="loading" @ok="ok" @cancel="close">
-    <a-textarea v-if="type === 'textarea'" v-model:value="value" :auto-size="{ minRows: 10, maxRows: 20 }" autofocus
+    <x-input type="textarea" v-if="type === 'textarea'" v-model:value="value" :auto-size="{ minRows: 10, maxRows: 20 }" autofocus
       @keydown="onKeydown" />
-    <a-input v-else v-model:value="value" autofocus @keydown="onKeydown" />
+    <x-input v-else v-model:value="value" autofocus @keydown="onKeydown" />
   </a-modal>
 </template>

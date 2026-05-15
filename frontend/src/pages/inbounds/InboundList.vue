@@ -367,7 +367,7 @@ function showQrCodeMenu(dbInbound) {
             <FilterOutlined />
           </template>
         </a-switch>
-        <a-input v-if="!enableFilter" v-model:value="searchKey" :placeholder="t('search')" autofocus
+        <x-input v-if="!enableFilter" v-model:value="searchKey" :placeholder="t('search')" autofocus
           :size="isMobile ? 'small' : 'middle'" :style="{ maxWidth: '300px' }" />
         <a-radio-group v-if="enableFilter" v-model:value="filterBy" button-style="solid"
           :size="isMobile ? 'small' : 'middle'">

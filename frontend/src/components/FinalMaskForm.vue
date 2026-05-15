@@ -103,35 +103,35 @@ function newNoiseItem() {
             </a-select>
           </a-form-item>
           <a-form-item label="Length">
-            <a-input v-model:value="mask.settings.length" placeholder="e.g. 100-200" />
+            <x-input v-model:value="mask.settings.length" placeholder="e.g. 100-200" />
           </a-form-item>
           <a-form-item label="Delay">
-            <a-input v-model:value="mask.settings.delay" placeholder="e.g. 10-20" />
+            <x-input v-model:value="mask.settings.delay" placeholder="e.g. 10-20" />
           </a-form-item>
           <a-form-item label="Max Split">
-            <a-input v-model:value="mask.settings.maxSplit" placeholder="e.g. 3-6" />
+            <x-input v-model:value="mask.settings.maxSplit" placeholder="e.g. 3-6" />
           </a-form-item>
         </template>
 
         <!-- Sudoku -->
         <template v-if="mask.type === 'sudoku'">
           <a-form-item label="Password">
-            <a-input v-model:value="mask.settings.password" placeholder="Obfuscation password" />
+            <x-input v-model:value="mask.settings.password" placeholder="Obfuscation password" />
           </a-form-item>
           <a-form-item label="ASCII">
-            <a-input v-model:value="mask.settings.ascii" placeholder="ASCII" />
+            <x-input v-model:value="mask.settings.ascii" placeholder="ASCII" />
           </a-form-item>
           <a-form-item label="Custom Table">
-            <a-input v-model:value="mask.settings.customTable" placeholder="Custom Table" />
+            <x-input v-model:value="mask.settings.customTable" placeholder="Custom Table" />
           </a-form-item>
           <a-form-item label="Custom Tables">
-            <a-input v-model:value="mask.settings.customTables" placeholder="Custom Tables" />
+            <x-input v-model:value="mask.settings.customTables" placeholder="Custom Tables" />
           </a-form-item>
           <a-form-item label="Padding Min">
-            <a-input-number v-model:value="mask.settings.paddingMin" :min="0" />
+            <x-input type="number" v-model:value="mask.settings.paddingMin" :min="0" />
           </a-form-item>
           <a-form-item label="Padding Max">
-            <a-input-number v-model:value="mask.settings.paddingMax" :min="0" />
+            <x-input type="number" v-model:value="mask.settings.paddingMax" :min="0" />
           </a-form-item>
         </template>
 
@@ -161,19 +161,19 @@ function newNoiseItem() {
                 </a-select>
               </a-form-item>
               <a-form-item label="Delay (ms)">
-                <a-input-number v-model:value="item.delay" :min="0" />
+                <x-input type="number" v-model:value="item.delay" :min="0" />
               </a-form-item>
               <template v-if="item.type === 'array'">
                 <a-form-item label="Rand">
-                  <a-input-number v-model:value="item.rand" :min="0" />
+                  <x-input type="number" v-model:value="item.rand" :min="0" />
                 </a-form-item>
                 <a-form-item label="Rand Range">
-                  <a-input v-model:value="item.randRange" placeholder="0-255" />
+                  <x-input v-model:value="item.randRange" placeholder="0-255" />
                 </a-form-item>
               </template>
               <a-form-item v-else label="Packet">
                 <a-input-group v-if="item.type === 'base64'" compact>
-                  <a-input v-model:value="item.packet" placeholder="binary data"
+                  <x-input v-model:value="item.packet" placeholder="binary data"
                     :style="{ width: 'calc(100% - 32px)' }" />
                   <a-button @click="item.packet = RandomUtil.randomBase64()">
                     <template #icon>
@@ -181,7 +181,7 @@ function newNoiseItem() {
                     </template>
                   </a-button>
                 </a-input-group>
-                <a-input v-else v-model:value="item.packet" placeholder="binary data" />
+                <x-input v-else v-model:value="item.packet" placeholder="binary data" />
               </a-form-item>
             </template>
           </template>
@@ -210,19 +210,19 @@ function newNoiseItem() {
                 </a-select>
               </a-form-item>
               <a-form-item label="Delay (ms)">
-                <a-input-number v-model:value="item.delay" :min="0" />
+                <x-input type="number" v-model:value="item.delay" :min="0" />
               </a-form-item>
               <template v-if="item.type === 'array'">
                 <a-form-item label="Rand">
-                  <a-input-number v-model:value="item.rand" :min="0" />
+                  <x-input type="number" v-model:value="item.rand" :min="0" />
                 </a-form-item>
                 <a-form-item label="Rand Range">
-                  <a-input v-model:value="item.randRange" placeholder="0-255" />
+                  <x-input v-model:value="item.randRange" placeholder="0-255" />
                 </a-form-item>
               </template>
               <a-form-item v-else label="Packet">
                 <a-input-group v-if="item.type === 'base64'" compact>
-                  <a-input v-model:value="item.packet" placeholder="binary data"
+                  <x-input v-model:value="item.packet" placeholder="binary data"
                     :style="{ width: 'calc(100% - 32px)' }" />
                   <a-button @click="item.packet = RandomUtil.randomBase64()">
                     <template #icon>
@@ -230,7 +230,7 @@ function newNoiseItem() {
                     </template>
                   </a-button>
                 </a-input-group>
-                <a-input v-else v-model:value="item.packet" placeholder="binary data" />
+                <x-input v-else v-model:value="item.packet" placeholder="binary data" />
               </a-form-item>
             </template>
           </template>
@@ -278,10 +278,10 @@ function newNoiseItem() {
         </a-form-item>
 
         <a-form-item v-if="['mkcp-aes128gcm', 'salamander'].includes(mask.type)" label="Password">
-          <a-input v-model:value="mask.settings.password" placeholder="Obfuscation password" />
+          <x-input v-model:value="mask.settings.password" placeholder="Obfuscation password" />
         </a-form-item>
         <a-form-item v-if="mask.type === 'header-dns'" label="Domain">
-          <a-input v-model:value="mask.settings.domain" placeholder="e.g., www.example.com" />
+          <x-input v-model:value="mask.settings.domain" placeholder="e.g., www.example.com" />
         </a-form-item>
         <a-form-item v-if="mask.type === 'xdns'" label="Domains">
           <a-select v-model:value="mask.settings.domains" mode="tags" :style="{ width: '100%' }"
@@ -291,7 +291,7 @@ function newNoiseItem() {
         <!-- Noise -->
         <template v-if="mask.type === 'noise'">
           <a-form-item label="Reset">
-            <a-input-number v-model:value="mask.settings.reset" :min="0" />
+            <x-input type="number" v-model:value="mask.settings.reset" :min="0" />
           </a-form-item>
           <a-form-item label="Noise">
             <a-button type="primary" size="small" @click="mask.settings.noise.push(newNoiseItem())">
@@ -316,25 +316,25 @@ function newNoiseItem() {
             </a-form-item>
             <template v-if="n.type === 'array'">
               <a-form-item label="Rand">
-                <a-input v-model:value="n.rand" placeholder="0 or 1-8192" />
+                <x-input v-model:value="n.rand" placeholder="0 or 1-8192" />
               </a-form-item>
               <a-form-item label="Rand Range">
-                <a-input v-model:value="n.randRange" placeholder="0-255" />
+                <x-input v-model:value="n.randRange" placeholder="0-255" />
               </a-form-item>
             </template>
             <a-form-item v-else label="Packet">
               <a-input-group v-if="n.type === 'base64'" compact>
-                <a-input v-model:value="n.packet" placeholder="binary data" :style="{ width: 'calc(100% - 32px)' }" />
+                <x-input v-model:value="n.packet" placeholder="binary data" :style="{ width: 'calc(100% - 32px)' }" />
                 <a-button @click="n.packet = RandomUtil.randomBase64()">
                   <template #icon>
                     <ReloadOutlined />
                   </template>
                 </a-button>
               </a-input-group>
-              <a-input v-else v-model:value="n.packet" placeholder="binary data" />
+              <x-input v-else v-model:value="n.packet" placeholder="binary data" />
             </a-form-item>
             <a-form-item label="Delay">
-              <a-input v-model:value="n.delay" placeholder="10-20" />
+              <x-input v-model:value="n.delay" placeholder="10-20" />
             </a-form-item>
           </template>
         </template>
@@ -364,22 +364,22 @@ function newNoiseItem() {
             </a-form-item>
             <template v-if="c.type === 'array'">
               <a-form-item label="Rand">
-                <a-input-number v-model:value="c.rand" />
+                <x-input type="number" v-model:value="c.rand" />
               </a-form-item>
               <a-form-item label="Rand Range">
-                <a-input v-model:value="c.randRange" placeholder="0-255" />
+                <x-input v-model:value="c.randRange" placeholder="0-255" />
               </a-form-item>
             </template>
             <a-form-item v-else label="Packet">
               <a-input-group v-if="c.type === 'base64'" compact>
-                <a-input v-model:value="c.packet" placeholder="binary data" :style="{ width: 'calc(100% - 32px)' }" />
+                <x-input v-model:value="c.packet" placeholder="binary data" :style="{ width: 'calc(100% - 32px)' }" />
                 <a-button @click="c.packet = RandomUtil.randomBase64()">
                   <template #icon>
                     <ReloadOutlined />
                   </template>
                 </a-button>
               </a-input-group>
-              <a-input v-else v-model:value="c.packet" placeholder="binary data" />
+              <x-input v-else v-model:value="c.packet" placeholder="binary data" />
             </a-form-item>
           </template>
 
@@ -407,22 +407,22 @@ function newNoiseItem() {
             </a-form-item>
             <template v-if="s.type === 'array'">
               <a-form-item label="Rand">
-                <a-input-number v-model:value="s.rand" />
+                <x-input type="number" v-model:value="s.rand" />
               </a-form-item>
               <a-form-item label="Rand Range">
-                <a-input v-model:value="s.randRange" placeholder="0-255" />
+                <x-input v-model:value="s.randRange" placeholder="0-255" />
               </a-form-item>
             </template>
             <a-form-item v-else label="Packet">
               <a-input-group v-if="s.type === 'base64'" compact>
-                <a-input v-model:value="s.packet" placeholder="binary data" :style="{ width: 'calc(100% - 32px)' }" />
+                <x-input v-model:value="s.packet" placeholder="binary data" :style="{ width: 'calc(100% - 32px)' }" />
                 <a-button @click="s.packet = RandomUtil.randomBase64()">
                   <template #icon>
                     <ReloadOutlined />
                   </template>
                 </a-button>
               </a-input-group>
-              <a-input v-else v-model:value="s.packet" placeholder="binary data" />
+              <x-input v-else v-model:value="s.packet" placeholder="binary data" />
             </a-form-item>
           </template>
         </template>
@@ -430,10 +430,10 @@ function newNoiseItem() {
         <!-- xICMP -->
         <template v-if="mask.type === 'xicmp'">
           <a-form-item label="IP">
-            <a-input v-model:value="mask.settings.ip" placeholder="0.0.0.0" />
+            <x-input v-model:value="mask.settings.ip" placeholder="0.0.0.0" />
           </a-form-item>
           <a-form-item label="ID">
-            <a-input-number v-model:value="mask.settings.id" :min="0" />
+            <x-input type="number" v-model:value="mask.settings.id" :min="0" />
           </a-form-item>
         </template>
       </template>
@@ -458,10 +458,10 @@ function newNoiseItem() {
         </a-form-item>
         <template v-if="['brutal', 'force-brutal'].includes(stream.finalmask.quicParams.congestion)">
           <a-form-item label="Brutal Up">
-            <a-input v-model:value="stream.finalmask.quicParams.brutalUp" placeholder="65537" />
+            <x-input v-model:value="stream.finalmask.quicParams.brutalUp" placeholder="65537" />
           </a-form-item>
           <a-form-item label="Brutal Down">
-            <a-input v-model:value="stream.finalmask.quicParams.brutalDown" placeholder="65537" />
+            <x-input v-model:value="stream.finalmask.quicParams.brutalDown" placeholder="65537" />
           </a-form-item>
         </template>
         <a-form-item label="UDP Hop">
@@ -469,39 +469,39 @@ function newNoiseItem() {
         </a-form-item>
         <template v-if="stream.finalmask.quicParams.hasUdpHop && stream.finalmask.quicParams.udpHop">
           <a-form-item label="Hop Ports">
-            <a-input v-model:value="stream.finalmask.quicParams.udpHop.ports" placeholder="e.g. 20000-50000" />
+            <x-input v-model:value="stream.finalmask.quicParams.udpHop.ports" placeholder="e.g. 20000-50000" />
           </a-form-item>
           <a-form-item label="Hop Interval (s)">
-            <a-input-number v-model:value="stream.finalmask.quicParams.udpHop.interval" :min="5" />
+            <x-input type="number" v-model:value="stream.finalmask.quicParams.udpHop.interval" :min="5" />
           </a-form-item>
         </template>
         <a-form-item label="Max Idle Timeout (s)">
-          <a-input-number v-model:value="stream.finalmask.quicParams.maxIdleTimeout" :min="4" :max="120" />
+          <x-input type="number" v-model:value="stream.finalmask.quicParams.maxIdleTimeout" :min="4" :max="120" />
         </a-form-item>
         <a-form-item label="Keep Alive Period (s)">
-          <a-input-number v-model:value="stream.finalmask.quicParams.keepAlivePeriod" :min="2" :max="60" />
+          <x-input type="number" v-model:value="stream.finalmask.quicParams.keepAlivePeriod" :min="2" :max="60" />
         </a-form-item>
         <a-form-item label="Disable Path MTU Dis">
           <a-switch v-model:checked="stream.finalmask.quicParams.disablePathMTUDiscovery" />
         </a-form-item>
         <a-form-item label="Max Incoming Streams">
-          <a-input-number v-model:value="stream.finalmask.quicParams.maxIncomingStreams" :min="8"
+          <x-input type="number" v-model:value="stream.finalmask.quicParams.maxIncomingStreams" :min="8"
             placeholder="1024 = default" />
         </a-form-item>
         <a-form-item label="Init Stream Window">
-          <a-input-number v-model:value="stream.finalmask.quicParams.initStreamReceiveWindow" :min="16384"
+          <x-input type="number" v-model:value="stream.finalmask.quicParams.initStreamReceiveWindow" :min="16384"
             placeholder="8388608 = default" />
         </a-form-item>
         <a-form-item label="Max Stream Window">
-          <a-input-number v-model:value="stream.finalmask.quicParams.maxStreamReceiveWindow" :min="16384"
+          <x-input type="number" v-model:value="stream.finalmask.quicParams.maxStreamReceiveWindow" :min="16384"
             placeholder="8388608 = default" />
         </a-form-item>
         <a-form-item label="Init Conn Window">
-          <a-input-number v-model:value="stream.finalmask.quicParams.initConnectionReceiveWindow" :min="16384"
+          <x-input type="number" v-model:value="stream.finalmask.quicParams.initConnectionReceiveWindow" :min="16384"
             placeholder="20971520 = default" />
         </a-form-item>
         <a-form-item label="Max Conn Window">
-          <a-input-number v-model:value="stream.finalmask.quicParams.maxConnectionReceiveWindow" :min="16384"
+          <x-input type="number" v-model:value="stream.finalmask.quicParams.maxConnectionReceiveWindow" :min="16384"
             placeholder="20971520 = default" />
         </a-form-item>
       </template>

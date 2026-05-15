@@ -111,7 +111,7 @@ const modalWidth = computed(() => (isMobile.value ? '100vw' : '80vw'));
         </a-select>
       </a-form-item>
       <a-form-item :label="t('filter')" class="filter-item">
-        <a-input v-model:value="filter" size="small" @keyup.enter="refresh" />
+        <x-input v-model:value="filter" size="small" @keyup.enter="refresh" />
       </a-form-item>
       <a-form-item>
         <a-checkbox v-model:checked="showDirect">Direct</a-checkbox>
