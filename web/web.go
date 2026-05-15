@@ -1,4 +1,4 @@
-// Package web provides the main web server implementation for the 3x-ui panel,
+// Package web provides the main web server implementation for the 6x-ui panel,
 // including HTTP/HTTPS serving, routing, templates, and background job scheduling.
 package web
 
@@ -15,17 +15,17 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mhsanaei/3x-ui/v3/config"
-	"github.com/mhsanaei/3x-ui/v3/logger"
-	"github.com/mhsanaei/3x-ui/v3/util/common"
-	"github.com/mhsanaei/3x-ui/v3/web/controller"
-	"github.com/mhsanaei/3x-ui/v3/web/job"
-	"github.com/mhsanaei/3x-ui/v3/web/locale"
-	"github.com/mhsanaei/3x-ui/v3/web/middleware"
-	"github.com/mhsanaei/3x-ui/v3/web/network"
-	"github.com/mhsanaei/3x-ui/v3/web/runtime"
-	"github.com/mhsanaei/3x-ui/v3/web/service"
-	"github.com/mhsanaei/3x-ui/v3/web/websocket"
+	"github.com/Ali-i06/6x-ui/v3/config"
+	"github.com/Ali-i06/6x-ui/v3/logger"
+	"github.com/Ali-i06/6x-ui/v3/util/common"
+	"github.com/Ali-i06/6x-ui/v3/web/controller"
+	"github.com/Ali-i06/6x-ui/v3/web/job"
+	"github.com/Ali-i06/6x-ui/v3/web/locale"
+	"github.com/Ali-i06/6x-ui/v3/web/middleware"
+	"github.com/Ali-i06/6x-ui/v3/web/network"
+	"github.com/Ali-i06/6x-ui/v3/web/runtime"
+	"github.com/Ali-i06/6x-ui/v3/web/service"
+	"github.com/Ali-i06/6x-ui/v3/web/websocket"
 
 	"github.com/gin-contrib/gzip"
 	"github.com/gin-contrib/sessions"
@@ -99,7 +99,7 @@ func EmbeddedDist() embed.FS {
 	return distFS
 }
 
-// Server represents the main web server for the 3x-ui panel with controllers, services, and scheduled jobs.
+// Server represents the main web server for the 6x-ui panel with controllers, services, and scheduled jobs.
 type Server struct {
 	httpServer *http.Server
 	listener   net.Listener
@@ -189,7 +189,7 @@ func (s *Server) initRouter() (*gin.Engine, error) {
 		sessionOptions.MaxAge = sessionMaxAge * 60 // minutes -> seconds
 	}
 	store.Options(sessionOptions)
-	engine.Use(sessions.Sessions("3x-ui", store))
+	engine.Use(sessions.Sessions("6x-ui", store))
 	engine.Use(func(c *gin.Context) {
 		c.Set("base_path", basePath)
 	})

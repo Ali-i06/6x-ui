@@ -6,8 +6,8 @@ import (
 	"errors"
 	"sync"
 
-	"github.com/mhsanaei/3x-ui/v3/database/model"
-	"github.com/mhsanaei/3x-ui/v3/xray"
+	"github.com/Ali-i06/6x-ui/v3/database/model"
+	"github.com/Ali-i06/6x-ui/v3/xray"
 )
 
 type LocalDeps struct {

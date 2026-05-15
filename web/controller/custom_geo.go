@@ -5,10 +5,10 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/mhsanaei/3x-ui/v3/database/model"
-	"github.com/mhsanaei/3x-ui/v3/logger"
-	"github.com/mhsanaei/3x-ui/v3/web/entity"
-	"github.com/mhsanaei/3x-ui/v3/web/service"
+	"github.com/Ali-i06/6x-ui/v3/database/model"
+	"github.com/Ali-i06/6x-ui/v3/logger"
+	"github.com/Ali-i06/6x-ui/v3/web/entity"
+	"github.com/Ali-i06/6x-ui/v3/web/service"
 
 	"github.com/gin-gonic/gin"
 )

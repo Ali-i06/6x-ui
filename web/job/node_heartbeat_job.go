@@ -5,10 +5,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/mhsanaei/3x-ui/v3/database/model"
-	"github.com/mhsanaei/3x-ui/v3/logger"
-	"github.com/mhsanaei/3x-ui/v3/web/service"
-	"github.com/mhsanaei/3x-ui/v3/web/websocket"
+	"github.com/Ali-i06/6x-ui/v3/database/model"
+	"github.com/Ali-i06/6x-ui/v3/logger"
+	"github.com/Ali-i06/6x-ui/v3/web/service"
+	"github.com/Ali-i06/6x-ui/v3/web/websocket"
 )
 
 const (

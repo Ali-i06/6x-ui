@@ -14,11 +14,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mhsanaei/3x-ui/v3/config"
-	"github.com/mhsanaei/3x-ui/v3/database"
-	"github.com/mhsanaei/3x-ui/v3/database/model"
-	"github.com/mhsanaei/3x-ui/v3/logger"
-	"github.com/mhsanaei/3x-ui/v3/util/netsafe"
+	"github.com/Ali-i06/6x-ui/v3/config"
+	"github.com/Ali-i06/6x-ui/v3/database"
+	"github.com/Ali-i06/6x-ui/v3/database/model"
+	"github.com/Ali-i06/6x-ui/v3/logger"
+	"github.com/Ali-i06/6x-ui/v3/util/netsafe"
 )
 
 const (

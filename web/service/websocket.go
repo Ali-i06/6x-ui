@@ -7,9 +7,9 @@ package service
 import (
 	"time"
 
-	"github.com/mhsanaei/3x-ui/v3/logger"
-	"github.com/mhsanaei/3x-ui/v3/util/common"
-	"github.com/mhsanaei/3x-ui/v3/web/websocket"
+	"github.com/Ali-i06/6x-ui/v3/logger"
+	"github.com/Ali-i06/6x-ui/v3/util/common"
+	"github.com/Ali-i06/6x-ui/v3/web/websocket"
 
 	"github.com/google/uuid"
 	ws "github.com/gorilla/websocket"

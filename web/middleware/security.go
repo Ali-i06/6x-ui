@@ -5,7 +5,7 @@ import (
 	"encoding/base64"
 	"net/http"
 
-	"github.com/mhsanaei/3x-ui/v3/web/session"
+	"github.com/Ali-i06/6x-ui/v3/web/session"
 
 	"github.com/gin-gonic/gin"
 )

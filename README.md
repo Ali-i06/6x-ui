@@ -2,13 +2,13 @@
 
 # 6X-UI
 
-**An advanced, heavily improved fork of [3X-UI](https://github.com/MHSanaei/3x-ui)**
+**An advanced, heavily improved fork of [3X-UI](https://github.com/Ali-i06/6x-ui)**
 
 [![Version](https://img.shields.io/badge/version-3.0.2-blue.svg)](#)
 [![Go Version](https://img.shields.io/badge/go-1.22+-00ADD8.svg)](#)
 [![Node](https://img.shields.io/badge/node-22+-339933.svg)](#)
 [![License](https://img.shields.io/badge/license-GPL%20V3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
-[![Fork of](https://img.shields.io/badge/fork%20of-3x--ui-orange.svg)](https://github.com/MHSanaei/3x-ui)
+[![Fork of](https://img.shields.io/badge/fork%20of-3x--ui-orange.svg)](https://github.com/Ali-i06/6x-ui)
 
 A powerful, open-source web-based control panel for managing Xray-core — rebuilt from the ground up with a modern Vue 3 frontend, improved architecture, and significant enhancements over the original.
 
@@ -166,7 +166,7 @@ Contributions are welcome! Please feel free to open issues and pull requests.
 
 ## Credits
 
-- [MHSanaei/3x-ui](https://github.com/MHSanaei/3x-ui) — the original project this fork is based on
+- [Ali-i06/6x-ui](https://github.com/Ali-i06/6x-ui) — the original project this fork is based on
 - [alireza0](https://github.com/alireza0/) — original X-UI author
 - [Iran v2ray rules](https://github.com/chocolate4u/Iran-v2ray-rules) (GPL-3.0)
 - [Russia v2ray rules](https://github.com/runetfreedom/russia-v2ray-rules-dat) (GPL-3.0)

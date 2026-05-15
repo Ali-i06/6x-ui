@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/mhsanaei/3x-ui/v3/logger"
+	"github.com/Ali-i06/6x-ui/v3/logger"
 )
 
 const (

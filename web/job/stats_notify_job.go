@@ -1,7 +1,7 @@
 package job
 
 import (
-	"github.com/mhsanaei/3x-ui/v3/web/service"
+	"github.com/Ali-i06/6x-ui/v3/web/service"
 )
 
 // LoginStatus represents the status of a login attempt.

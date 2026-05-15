@@ -4,14 +4,14 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/mhsanaei/3x-ui/v3/web/middleware"
-	"github.com/mhsanaei/3x-ui/v3/web/service"
-	"github.com/mhsanaei/3x-ui/v3/web/session"
+	"github.com/Ali-i06/6x-ui/v3/web/middleware"
+	"github.com/Ali-i06/6x-ui/v3/web/service"
+	"github.com/Ali-i06/6x-ui/v3/web/session"
 
 	"github.com/gin-gonic/gin"
 )
 
-// APIController handles the main API routes for the 3x-ui panel, including inbounds and server management.
+// APIController handles the main API routes for the 6x-ui panel, including inbounds and server management.
 type APIController struct {
 	BaseController
 	inboundController *InboundController

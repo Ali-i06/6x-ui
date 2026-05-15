@@ -5,9 +5,9 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/mhsanaei/3x-ui/v3/database"
-	"github.com/mhsanaei/3x-ui/v3/database/model"
-	xuilogger "github.com/mhsanaei/3x-ui/v3/logger"
+	"github.com/Ali-i06/6x-ui/v3/database"
+	"github.com/Ali-i06/6x-ui/v3/database/model"
+	xuilogger "github.com/Ali-i06/6x-ui/v3/logger"
 	"github.com/op/go-logging"
 )
 
@@ -24,7 +24,7 @@ func setupConflictDB(t *testing.T) {
 
 	dbDir := t.TempDir()
 	t.Setenv("XUI_DB_FOLDER", dbDir)
-	if err := database.InitDB(filepath.Join(dbDir, "3x-ui.db")); err != nil {
+	if err := database.InitDB(filepath.Join(dbDir, "6x-ui.db")); err != nil {
 		t.Fatalf("InitDB: %v", err)
 	}
 	t.Cleanup(func() {

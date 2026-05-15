@@ -11,14 +11,14 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mhsanaei/3x-ui/v3/database"
-	"github.com/mhsanaei/3x-ui/v3/database/model"
-	"github.com/mhsanaei/3x-ui/v3/logger"
-	"github.com/mhsanaei/3x-ui/v3/util/common"
-	"github.com/mhsanaei/3x-ui/v3/util/random"
-	"github.com/mhsanaei/3x-ui/v3/util/reflect_util"
-	"github.com/mhsanaei/3x-ui/v3/web/entity"
-	"github.com/mhsanaei/3x-ui/v3/xray"
+	"github.com/Ali-i06/6x-ui/v3/database"
+	"github.com/Ali-i06/6x-ui/v3/database/model"
+	"github.com/Ali-i06/6x-ui/v3/logger"
+	"github.com/Ali-i06/6x-ui/v3/util/common"
+	"github.com/Ali-i06/6x-ui/v3/util/random"
+	"github.com/Ali-i06/6x-ui/v3/util/reflect_util"
+	"github.com/Ali-i06/6x-ui/v3/web/entity"
+	"github.com/Ali-i06/6x-ui/v3/xray"
 )
 
 //go:embed config.json
