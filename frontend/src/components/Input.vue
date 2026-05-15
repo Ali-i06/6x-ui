@@ -64,91 +64,107 @@ defineProps({
 /*
   ---------------------------------------------------------------
   XUI Input — استایل‌های گلوبال (بدون scoped)
-  برای تغییر شکل همه input های پروژه، فقط همین فایل رو ویرایش کن.
   ---------------------------------------------------------------
 */
 
 /* ── متغیرهای پایه ── */
 :root {
   --xui-radius: 10px;
-  --xui-transition: border-color 0.22s cubic-bezier(0.4, 0, 0.2, 1),
-                    box-shadow   0.22s cubic-bezier(0.4, 0, 0.2, 1),
-                    background   0.22s cubic-bezier(0.4, 0, 0.2, 1),
-                    transform    0.18s cubic-bezier(0.4, 0, 0.2, 1);
-  --xui-focus-shadow: 0 0 0 3px rgba(22, 119, 255, 0.16);
-  --xui-hover-lift: translateY(-1px);
+  --xui-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --xui-duration: 0.28s;
+  --xui-transition:
+    border-color   var(--xui-duration) var(--xui-ease),
+    box-shadow     var(--xui-duration) var(--xui-ease),
+    background     var(--xui-duration) var(--xui-ease);
+
+  /* light mode */
+  --xui-border-idle:  rgba(0, 0, 0, 0.12);
+  --xui-border-hover: rgba(22, 119, 255, 0.45);
+  --xui-border-focus: rgba(22, 119, 255, 0.70);
+  --xui-bg-idle:      rgba(255, 255, 255, 1);
+  --xui-bg-hover:     rgba(250, 252, 255, 1);
+  --xui-focus-shadow:
+    0 0 0 3px rgba(22, 119, 255, 0.12),
+    0 2px 8px  rgba(22, 119, 255, 0.08);
 }
 
-/* ── Simple input & textarea ── */
+/* ── dark mode ── */
+body.dark {
+  --xui-border-idle:  rgba(255, 255, 255, 0.10);
+  --xui-border-hover: rgba(64, 150, 255, 0.45);
+  --xui-border-focus: rgba(64, 150, 255, 0.65);
+  --xui-bg-idle:      rgba(255, 255, 255, 0.04);
+  --xui-bg-hover:     rgba(255, 255, 255, 0.06);
+  --xui-focus-shadow:
+    0 0 0 3px rgba(64, 150, 255, 0.14),
+    0 2px 10px rgba(64, 150, 255, 0.06);
+}
+
+/* ─── Simple input & textarea ─── */
 input.xui-input.ant-input,
 textarea.xui-input.ant-input {
   border-radius: var(--xui-radius) !important;
-  transition: var(--xui-transition) !important;
+  border-color:  var(--xui-border-idle) !important;
+  background:    var(--xui-bg-idle) !important;
+  transition:    var(--xui-transition) !important;
 }
-
 input.xui-input.ant-input:hover,
 textarea.xui-input.ant-input:hover {
-  transform: var(--xui-hover-lift);
+  border-color: var(--xui-border-hover) !important;
+  background:   var(--xui-bg-hover) !important;
 }
-
 input.xui-input.ant-input:focus,
 textarea.xui-input.ant-input:focus {
-  border-radius: var(--xui-radius) !important;
-  box-shadow: var(--xui-focus-shadow) !important;
-  transform: var(--xui-hover-lift);
+  border-color: var(--xui-border-focus) !important;
+  box-shadow:   var(--xui-focus-shadow) !important;
+  background:   var(--xui-bg-idle) !important;
 }
 
-/* ── Affix wrapper (prefix/suffix, password) ── */
+/* ─── Affix wrapper (prefix/suffix, password) ─── */
 .xui-input.ant-input-affix-wrapper,
 .xui-input.ant-input-affix-wrapper.ant-input-password {
   border-radius: var(--xui-radius) !important;
-  transition: var(--xui-transition) !important;
+  border-color:  var(--xui-border-idle) !important;
+  background:    var(--xui-bg-idle) !important;
+  transition:    var(--xui-transition) !important;
 }
-
 .xui-input.ant-input-affix-wrapper:hover,
 .xui-input.ant-input-affix-wrapper.ant-input-password:hover {
-  transform: var(--xui-hover-lift);
+  border-color: var(--xui-border-hover) !important;
+  background:   var(--xui-bg-hover) !important;
 }
-
 .xui-input.ant-input-affix-wrapper-focused,
 .xui-input.ant-input-affix-wrapper:focus-within {
-  border-radius: var(--xui-radius) !important;
-  box-shadow: var(--xui-focus-shadow) !important;
-  transform: var(--xui-hover-lift);
+  border-color: var(--xui-border-focus) !important;
+  box-shadow:   var(--xui-focus-shadow) !important;
+  background:   var(--xui-bg-idle) !important;
 }
 
-/* داخل affix wrapper، خود input نباید border و radius مجزا داشته باشه */
+/* داخل affix wrapper — بدون border/radius مجزا */
 .xui-input.ant-input-affix-wrapper .ant-input {
   border-radius: 0 !important;
-  box-shadow: none !important;
+  box-shadow:    none !important;
+  background:    transparent !important;
+  border-color:  transparent !important;
 }
 
-/* ── Number input ── */
+/* ─── Number input ─── */
 .xui-input.ant-input-number,
 .xui-input.ant-input-number-affix-wrapper {
   border-radius: var(--xui-radius) !important;
-  transition: var(--xui-transition) !important;
+  border-color:  var(--xui-border-idle) !important;
+  background:    var(--xui-bg-idle) !important;
+  transition:    var(--xui-transition) !important;
 }
-
 .xui-input.ant-input-number:hover,
 .xui-input.ant-input-number-affix-wrapper:hover {
-  transform: var(--xui-hover-lift);
+  border-color: var(--xui-border-hover) !important;
+  background:   var(--xui-bg-hover) !important;
 }
-
 .xui-input.ant-input-number-focused,
 .xui-input.ant-input-number:focus-within,
 .xui-input.ant-input-number-affix-wrapper-focused {
-  border-radius: var(--xui-radius) !important;
-  box-shadow: var(--xui-focus-shadow) !important;
-  transform: var(--xui-hover-lift);
-}
-
-/* ── Dark theme focus shadow ── */
-body.is-dark .xui-input.ant-input:focus,
-body.is-dark .xui-input.ant-input-affix-wrapper-focused,
-body.is-dark .xui-input.ant-input-affix-wrapper:focus-within,
-body.is-dark .xui-input.ant-input-number-focused,
-body.is-dark .xui-input.ant-input-number:focus-within {
-  --xui-focus-shadow: 0 0 0 3px rgba(64, 150, 255, 0.20);
+  border-color: var(--xui-border-focus) !important;
+  box-shadow:   var(--xui-focus-shadow) !important;
 }
 </style>

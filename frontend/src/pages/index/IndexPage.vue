@@ -29,6 +29,7 @@ import { useMediaQuery } from '@/composables/useMediaQuery.js';
 import AppSidebar from '@/components/AppSidebar.vue';
 import CustomStatistic from '@/components/CustomStatistic.vue';
 import TextModal from '@/components/TextModal.vue';
+import XCard from '@/components/Card.vue';
 import StatusCard from './StatusCard.vue';
 import XrayStatusCard from './XrayStatusCard.vue';
 import PanelUpdateModal from './PanelUpdateModal.vue';
@@ -153,7 +154,7 @@ async function openConfig() {
               </a-col>
 
               <a-col :xs="24" :lg="12">
-                <a-card :title="t('menu.link')" hoverable>
+                <x-card :title="t('menu.link')" hoverable>
                   <template #actions>
                     <a-space class="action" @click="logsOpen = true">
                       <BarsOutlined />
@@ -168,11 +169,11 @@ async function openConfig() {
                       <span v-if="!isMobile">{{ t('pages.index.backupTitle') }}</span>
                     </a-space>
                   </template>
-                </a-card>
+                </x-card>
               </a-col>
 
               <a-col :xs="24" :lg="12">
-                <a-card title="3X-UI" hoverable>
+                <x-card title="3X-UI" hoverable>
                   <template #actions>
                     <a-space class="action" @click="openTelegram">
                       <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" class="tg-icon"
@@ -192,11 +193,11 @@ async function openConfig() {
                       </span>
                     </a-space>
                   </template>
-                </a-card>
+                </x-card>
               </a-col>
 
               <a-col :xs="24" :lg="12">
-                <a-card :title="t('pages.index.charts')" hoverable>
+                <x-card :title="t('pages.index.charts')" hoverable>
                   <template #actions>
                     <a-space class="action" @click="openSystemHistory">
                       <AreaChartOutlined />
@@ -207,11 +208,11 @@ async function openConfig() {
                       <span v-if="!isMobile">{{ t('pages.index.xrayMetricsTitle') }}</span>
                     </a-space>
                   </template>
-                </a-card>
+                </x-card>
               </a-col>
 
               <a-col :xs="24" :lg="12">
-                <a-card :title="t('pages.index.operationHours')" hoverable>
+                <x-card :title="t('pages.index.operationHours')" hoverable>
                   <a-row :gutter="isMobile ? [8, 8] : 0">
                     <a-col :span="12">
                       <CustomStatistic title="Xray" :value="TimeFormatter.formatSecond(status.appStats.uptime)">
@@ -228,11 +229,11 @@ async function openConfig() {
                       </CustomStatistic>
                     </a-col>
                   </a-row>
-                </a-card>
+                </x-card>
               </a-col>
 
               <a-col :xs="24" :lg="12">
-                <a-card :title="t('usage')" hoverable>
+                <x-card :title="t('usage')" hoverable>
                   <a-row :gutter="isMobile ? [8, 8] : 0">
                     <a-col :span="12">
                       <CustomStatistic :title="t('pages.index.memory')"
@@ -250,11 +251,11 @@ async function openConfig() {
                       </CustomStatistic>
                     </a-col>
                   </a-row>
-                </a-card>
+                </x-card>
               </a-col>
 
               <a-col :xs="24" :lg="12">
-                <a-card :title="t('pages.index.overallSpeed')" hoverable>
+                <x-card :title="t('pages.index.overallSpeed')" hoverable>
                   <a-row :gutter="isMobile ? [8, 8] : 0">
                     <a-col :span="12">
                       <CustomStatistic :title="t('pages.index.upload')"
@@ -275,11 +276,11 @@ async function openConfig() {
                       </CustomStatistic>
                     </a-col>
                   </a-row>
-                </a-card>
+                </x-card>
               </a-col>
 
               <a-col :xs="24" :lg="12">
-                <a-card :title="t('pages.index.totalData')" hoverable>
+                <x-card :title="t('pages.index.totalData')" hoverable>
                   <a-row :gutter="isMobile ? [8, 8] : 0">
                     <a-col :span="12">
                       <CustomStatistic :title="t('pages.index.sent')"
@@ -298,11 +299,11 @@ async function openConfig() {
                       </CustomStatistic>
                     </a-col>
                   </a-row>
-                </a-card>
+                </x-card>
               </a-col>
 
               <a-col :xs="24" :lg="12">
-                <a-card :title="t('pages.index.ipAddresses')" hoverable>
+                <x-card :title="t('pages.index.ipAddresses')" hoverable>
                   <template #extra>
                     <a-tooltip :title="t('pages.index.toggleIpVisibility')" :placement="isMobile ? 'topRight' : 'top'">
                       <component :is="showIp ? EyeOutlined : EyeInvisibleOutlined" class="ip-toggle-icon"
@@ -325,11 +326,11 @@ async function openConfig() {
                       </CustomStatistic>
                     </a-col>
                   </a-row>
-                </a-card>
+                </x-card>
               </a-col>
 
               <a-col :xs="24" :lg="12">
-                <a-card :title="t('pages.index.connectionCount')" hoverable>
+                <x-card :title="t('pages.index.connectionCount')" hoverable>
                   <a-row :gutter="isMobile ? [8, 8] : 0">
                     <a-col :span="12">
                       <CustomStatistic title="TCP" :value="status.tcpCount">
@@ -346,7 +347,7 @@ async function openConfig() {
                       </CustomStatistic>
                     </a-col>
                   </a-row>
-                </a-card>
+                </x-card>
               </a-col>
             </a-row>
           </a-spin>

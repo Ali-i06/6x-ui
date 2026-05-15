@@ -1,4 +1,5 @@
 <script setup>
+import XCard from '@/components/Card.vue';
 import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import {
@@ -37,7 +38,7 @@ function badgeAnimationClass(color) {
 </script>
 
 <template>
-  <a-card hoverable>
+  <x-card hoverable>
     <template #title>
       <a-space direction="horizontal">
         <span>{{ t('pages.index.xrayStatus') }}</span>
@@ -95,7 +96,7 @@ function badgeAnimationClass(color) {
         </span>
       </a-space>
     </template>
-  </a-card>
+  </x-card>
 </template>
 
 <style scoped>

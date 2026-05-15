@@ -1,4 +1,5 @@
 <script setup>
+import XCard from '@/components/Card.vue';
 import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { AreaChartOutlined } from '@ant-design/icons-vue';
@@ -24,7 +25,7 @@ const trailColor = 'rgba(128, 128, 128, 0.25)';
 </script>
 
 <template>
-  <a-card hoverable>
+  <x-card hoverable>
     <a-row :gutter="[0, isMobile ? 16 : 0]">
       <!-- CPU + Memory -->
       <a-col :xs="24" :md="12">
@@ -79,7 +80,7 @@ const trailColor = 'rgba(128, 128, 128, 0.25)';
         </a-row>
       </a-col>
     </a-row>
-  </a-card>
+  </x-card>
 </template>
 
 <style scoped>

@@ -1,0 +1,479 @@
+2026/05/15 15:54:57 INFO - Web server running HTTP on [::]:2053
+2026/05/15 15:54:57 INFO - custom geo startup: no custom geofiles configured
+2026/05/15 15:54:57 DEBUG - restart Xray, force: true
+2026/05/15 15:54:57 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:54:57 WARNING - start xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:54:57 INFO - Sub server running HTTP on [::]:2096
+2026/05/15 15:54:59 DEBUG - restart Xray, force: false
+2026/05/15 15:54:59 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:54:59 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:01 DEBUG - restart Xray, force: false
+2026/05/15 15:55:01 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:01 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:01 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:55:01 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:55:03 DEBUG - restart Xray, force: false
+2026/05/15 15:55:03 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:03 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:03 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:55:05 DEBUG - restart Xray, force: false
+2026/05/15 15:55:05 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:05 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:05 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:55:07 DEBUG - restart Xray, force: false
+2026/05/15 15:55:07 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:07 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:07 WARNING - Failed to read configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:07 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:55:09 DEBUG - restart Xray, force: false
+2026/05/15 15:55:09 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:09 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:09 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:55:11 DEBUG - restart Xray, force: false
+2026/05/15 15:55:11 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:11 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:11 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:55:13 DEBUG - restart Xray, force: false
+2026/05/15 15:55:13 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:13 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:13 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:55:15 DEBUG - restart Xray, force: false
+2026/05/15 15:55:15 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:15 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:15 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:55:17 DEBUG - restart Xray, force: false
+2026/05/15 15:55:17 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:17 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:17 WARNING - Failed to read configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:17 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:55:19 DEBUG - restart Xray, force: false
+2026/05/15 15:55:19 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:19 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:19 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:55:21 DEBUG - restart Xray, force: false
+2026/05/15 15:55:21 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:21 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:21 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:55:23 DEBUG - restart Xray, force: false
+2026/05/15 15:55:23 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:23 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:23 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:55:25 DEBUG - restart Xray, force: false
+2026/05/15 15:55:25 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:25 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:25 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:55:27 DEBUG - restart Xray, force: false
+2026/05/15 15:55:27 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:27 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:27 WARNING - Failed to read configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:27 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:55:29 DEBUG - restart Xray, force: false
+2026/05/15 15:55:29 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:29 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:29 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:55:31 DEBUG - restart Xray, force: false
+2026/05/15 15:55:31 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:31 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:31 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:55:33 DEBUG - restart Xray, force: false
+2026/05/15 15:55:33 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:33 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:33 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:55:35 DEBUG - restart Xray, force: false
+2026/05/15 15:55:35 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:35 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:35 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:55:37 DEBUG - restart Xray, force: false
+2026/05/15 15:55:37 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:37 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:37 WARNING - Failed to read configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:37 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:55:39 DEBUG - restart Xray, force: false
+2026/05/15 15:55:39 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:39 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:39 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:55:41 DEBUG - restart Xray, force: false
+2026/05/15 15:55:41 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:41 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:55:41 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:55:42 DEBUG - Attempting to stop Xray...
+2026/05/15 15:55:42 INFO - WebSocket hub stopped
+2026/05/15 15:56:11 INFO - Web server running HTTP on [::]:2053
+2026/05/15 15:56:11 INFO - custom geo startup: no custom geofiles configured
+2026/05/15 15:56:11 DEBUG - restart Xray, force: true
+2026/05/15 15:56:11 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:11 WARNING - start xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:12 INFO - Sub server running HTTP on [::]:2096
+2026/05/15 15:56:13 DEBUG - restart Xray, force: false
+2026/05/15 15:56:13 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:13 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:14 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:56:15 DEBUG - restart Xray, force: false
+2026/05/15 15:56:15 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:15 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:15 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:56:17 DEBUG - restart Xray, force: false
+2026/05/15 15:56:17 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:17 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:17 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:56:19 DEBUG - restart Xray, force: false
+2026/05/15 15:56:19 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:19 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:19 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:56:21 DEBUG - restart Xray, force: false
+2026/05/15 15:56:21 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:21 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:21 WARNING - Failed to read configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:21 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:56:23 DEBUG - restart Xray, force: false
+2026/05/15 15:56:23 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:23 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:23 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:56:25 DEBUG - restart Xray, force: false
+2026/05/15 15:56:25 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:25 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:25 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:56:27 DEBUG - restart Xray, force: false
+2026/05/15 15:56:27 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:27 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:27 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:56:29 DEBUG - restart Xray, force: false
+2026/05/15 15:56:29 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:29 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:29 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:56:31 DEBUG - restart Xray, force: false
+2026/05/15 15:56:31 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:31 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:31 WARNING - Failed to read configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:31 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:56:33 DEBUG - restart Xray, force: false
+2026/05/15 15:56:33 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:33 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:33 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:56:33 INFO - admin logged in successfully, Ip Address: 127.0.0.1
+2026/05/15 15:56:33 INFO - admin logged in successfully
+2026/05/15 15:56:34 WARNING - Failed to read configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:34 WARNING - An error occurred while retrieving parameters. Failed:  open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:34 WARNING - Failed to read configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:34 WARNING - An error occurred while retrieving parameters. Failed:  open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:34 DEBUG - panel update check failed: GitHub API returned status 404: 404 Not Found
+2026/05/15 15:56:35 DEBUG - restart Xray, force: false
+2026/05/15 15:56:35 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:35 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:35 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:56:37 DEBUG - restart Xray, force: false
+2026/05/15 15:56:37 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:37 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:37 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:56:39 DEBUG - restart Xray, force: false
+2026/05/15 15:56:39 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:39 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:39 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:56:41 DEBUG - restart Xray, force: false
+2026/05/15 15:56:41 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:41 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:41 WARNING - Failed to read configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:41 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:56:43 DEBUG - restart Xray, force: false
+2026/05/15 15:56:43 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:43 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:43 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:56:45 DEBUG - restart Xray, force: false
+2026/05/15 15:56:45 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:45 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:45 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:56:47 DEBUG - restart Xray, force: false
+2026/05/15 15:56:47 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:47 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:47 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:56:49 DEBUG - restart Xray, force: false
+2026/05/15 15:56:49 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:49 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:49 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:56:51 DEBUG - restart Xray, force: false
+2026/05/15 15:56:51 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:51 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:51 WARNING - Failed to read configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:51 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:56:53 DEBUG - restart Xray, force: false
+2026/05/15 15:56:53 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:53 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:53 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:56:55 DEBUG - restart Xray, force: false
+2026/05/15 15:56:55 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:55 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:55 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:56:57 DEBUG - restart Xray, force: false
+2026/05/15 15:56:57 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:57 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:57 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:56:59 DEBUG - restart Xray, force: false
+2026/05/15 15:56:59 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:59 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:56:59 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:01 DEBUG - restart Xray, force: false
+2026/05/15 15:57:01 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:01 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:01 WARNING - Failed to read configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:01 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:03 DEBUG - restart Xray, force: false
+2026/05/15 15:57:03 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:03 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:03 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:05 DEBUG - restart Xray, force: false
+2026/05/15 15:57:05 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:05 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:05 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:07 DEBUG - restart Xray, force: false
+2026/05/15 15:57:07 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:07 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:07 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:09 DEBUG - restart Xray, force: false
+2026/05/15 15:57:09 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:09 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:09 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:11 DEBUG - restart Xray, force: false
+2026/05/15 15:57:11 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:11 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:11 WARNING - Failed to read configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:11 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:13 DEBUG - restart Xray, force: false
+2026/05/15 15:57:13 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:13 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:13 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:15 DEBUG - restart Xray, force: false
+2026/05/15 15:57:15 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:15 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:15 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:17 DEBUG - restart Xray, force: false
+2026/05/15 15:57:17 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:17 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:17 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:19 DEBUG - restart Xray, force: false
+2026/05/15 15:57:19 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:19 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:19 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:19 DEBUG - WebSocket client a1f2c50c-9177-489e-89e7-bc005e9c1833 registered from 127.0.0.1
+2026/05/15 15:57:19 DEBUG - WebSocket client connected: a1f2c50c-9177-489e-89e7-bc005e9c1833 (total: 1)
+2026/05/15 15:57:19 WARNING - Failed to read configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:19 WARNING - Failed to read configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:19 WARNING - An error occurred while retrieving parameters. Failed:  open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:19 WARNING - An error occurred while retrieving parameters. Failed:  open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:21 DEBUG - restart Xray, force: false
+2026/05/15 15:57:21 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:21 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:21 WARNING - Failed to read configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:21 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:23 DEBUG - restart Xray, force: false
+2026/05/15 15:57:23 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:23 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:23 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:24 WARNING - Failed to read configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:24 WARNING - An error occurred while retrieving parameters. Failed:  open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:25 DEBUG - restart Xray, force: false
+2026/05/15 15:57:25 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:25 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:25 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:27 DEBUG - restart Xray, force: false
+2026/05/15 15:57:27 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:27 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:27 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:29 DEBUG - restart Xray, force: false
+2026/05/15 15:57:29 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:29 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:29 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:31 DEBUG - restart Xray, force: false
+2026/05/15 15:57:31 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:31 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:31 WARNING - Failed to read configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:31 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:33 DEBUG - restart Xray, force: false
+2026/05/15 15:57:33 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:33 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:33 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:34 DEBUG - WebSocket client disconnected: a1f2c50c-9177-489e-89e7-bc005e9c1833 (total: 0)
+2026/05/15 15:57:35 DEBUG - restart Xray, force: false
+2026/05/15 15:57:35 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:35 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:35 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:35 DEBUG - WebSocket client c347ae86-9fed-417a-a020-75d345df6172 registered from 127.0.0.1
+2026/05/15 15:57:35 DEBUG - WebSocket client connected: c347ae86-9fed-417a-a020-75d345df6172 (total: 1)
+2026/05/15 15:57:37 DEBUG - restart Xray, force: false
+2026/05/15 15:57:37 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:37 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:37 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:39 DEBUG - restart Xray, force: false
+2026/05/15 15:57:39 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:39 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:39 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:41 DEBUG - restart Xray, force: false
+2026/05/15 15:57:41 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:41 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:41 WARNING - Failed to read configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:41 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:43 DEBUG - restart Xray, force: false
+2026/05/15 15:57:43 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:43 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:43 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:45 DEBUG - restart Xray, force: false
+2026/05/15 15:57:45 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:45 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:45 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:47 DEBUG - restart Xray, force: false
+2026/05/15 15:57:47 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:47 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:47 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:49 DEBUG - restart Xray, force: false
+2026/05/15 15:57:49 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:49 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:49 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:51 DEBUG - restart Xray, force: false
+2026/05/15 15:57:51 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:51 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:51 WARNING - Failed to read configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:51 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:51 DEBUG - WebSocket client disconnected: c347ae86-9fed-417a-a020-75d345df6172 (total: 0)
+2026/05/15 15:57:53 DEBUG - restart Xray, force: false
+2026/05/15 15:57:53 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:53 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:53 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:55 DEBUG - restart Xray, force: false
+2026/05/15 15:57:55 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:55 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:55 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:57 DEBUG - restart Xray, force: false
+2026/05/15 15:57:57 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:57 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:57 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:57:59 DEBUG - restart Xray, force: false
+2026/05/15 15:57:59 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:59 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:57:59 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:00 DEBUG - WebSocket client d2a42ecb-d78f-4a48-b4f5-2f4bdc826a5c registered from 127.0.0.1
+2026/05/15 15:58:00 DEBUG - WebSocket client connected: d2a42ecb-d78f-4a48-b4f5-2f4bdc826a5c (total: 1)
+2026/05/15 15:58:01 DEBUG - restart Xray, force: false
+2026/05/15 15:58:01 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:01 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:01 WARNING - Failed to read configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:01 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:03 DEBUG - restart Xray, force: false
+2026/05/15 15:58:03 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:03 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:03 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:05 DEBUG - restart Xray, force: false
+2026/05/15 15:58:05 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:05 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:05 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:07 DEBUG - restart Xray, force: false
+2026/05/15 15:58:07 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:07 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:07 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:09 DEBUG - restart Xray, force: false
+2026/05/15 15:58:09 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:09 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:09 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:11 DEBUG - restart Xray, force: false
+2026/05/15 15:58:11 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:11 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:11 WARNING - Failed to read configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:11 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:12 DEBUG - WebSocket client disconnected: d2a42ecb-d78f-4a48-b4f5-2f4bdc826a5c (total: 0)
+2026/05/15 15:58:12 WARNING - Failed to read configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:12 WARNING - An error occurred while retrieving parameters. Failed:  open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:12 WARNING - Failed to read configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:12 WARNING - An error occurred while retrieving parameters. Failed:  open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:13 DEBUG - restart Xray, force: false
+2026/05/15 15:58:13 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:13 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:13 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:14 DEBUG - panel update check failed: GitHub API returned status 404: 404 Not Found
+2026/05/15 15:58:15 DEBUG - restart Xray, force: false
+2026/05/15 15:58:15 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:15 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:15 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:17 DEBUG - restart Xray, force: false
+2026/05/15 15:58:17 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:17 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:17 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:19 DEBUG - restart Xray, force: false
+2026/05/15 15:58:19 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:19 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:19 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:21 DEBUG - restart Xray, force: false
+2026/05/15 15:58:21 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:21 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:21 WARNING - Failed to read configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:21 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:23 DEBUG - restart Xray, force: false
+2026/05/15 15:58:23 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:23 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:23 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:25 DEBUG - restart Xray, force: false
+2026/05/15 15:58:25 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:25 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:25 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:27 DEBUG - restart Xray, force: false
+2026/05/15 15:58:27 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:27 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:27 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:29 DEBUG - restart Xray, force: false
+2026/05/15 15:58:29 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:29 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:29 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:31 DEBUG - restart Xray, force: false
+2026/05/15 15:58:31 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:31 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:31 WARNING - Failed to read configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:31 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:33 DEBUG - restart Xray, force: false
+2026/05/15 15:58:33 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:33 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:33 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:35 DEBUG - restart Xray, force: false
+2026/05/15 15:58:35 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:35 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:35 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:37 DEBUG - restart Xray, force: false
+2026/05/15 15:58:37 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:37 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:37 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:39 DEBUG - restart Xray, force: false
+2026/05/15 15:58:39 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:39 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:39 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:41 DEBUG - restart Xray, force: false
+2026/05/15 15:58:41 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:41 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:41 WARNING - Failed to read configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:41 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:43 DEBUG - restart Xray, force: false
+2026/05/15 15:58:43 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:43 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:43 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:45 DEBUG - restart Xray, force: false
+2026/05/15 15:58:45 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:45 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:45 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:47 DEBUG - restart Xray, force: false
+2026/05/15 15:58:47 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:47 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:47 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:49 DEBUG - restart Xray, force: false
+2026/05/15 15:58:49 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:49 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:49 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:51 DEBUG - restart Xray, force: false
+2026/05/15 15:58:51 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:51 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:51 WARNING - Failed to read configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:51 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:53 DEBUG - restart Xray, force: false
+2026/05/15 15:58:53 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:53 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:53 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:55 DEBUG - restart Xray, force: false
+2026/05/15 15:58:55 ERROR - Failure in running xray-core process:  Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:55 ERROR - Restart xray failed: Failed to write configuration file: open bin/config.json: The system cannot find the path specified.
+2026/05/15 15:58:55 DEBUG - xray metrics unavailable: Get "http://127.0.0.1:11111/debug/vars": dial tcp 127.0.0.1:11111: connectex: No connection could be made because the target machine actively refused it.
+2026/05/15 15:58:55 DEBUG - Attempting to stop Xray...
+2026/05/15 15:58:55 INFO - WebSocket hub stopped
